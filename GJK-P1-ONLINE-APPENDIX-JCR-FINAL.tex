@@ -1,0 +1,1191 @@
+ \documentclass[11pt] {article}
+
+\usepackage{sgame}
+
+
+\usepackage[usenames,dvipsnames]{color}
+
+\usepackage{comment}
+\usepackage{amsmath}
+\usepackage{epsfig}
+\usepackage{amssymb}
+\usepackage{amscd}
+\usepackage{graphics}
+\usepackage{enumerate}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{example}{Example}
+\newtheorem{observation}{Observation}
+\newtheorem{claim}{Claim}
+\newtheorem{condition}{Condition}
+\newtheorem{assumption}{Assumption}
+\newtheorem{definition}{Definition}
+\newtheorem{aggregation}{Aggregation rule}
+\def\argmax{\mathop{\rm argmax}\limits}
+\def\max{\mathop{\rm max}\limits}
+\def\argmin{\mathop{\rm argmin}\limits}
+
+\newcommand{\norm}[	1]{\lVert#1\rVert}%Define double-bar norm symbols
+\newtheorem{notation}{Proposition}
+\usepackage{setspace} 
+\usepackage{pdflscape}
+\usepackage{graphicx}
+\usepackage{placeins}
+
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{supertabular}
+
+\usepackage{rotfloat}
+
+\newcommand{\otoprule}{\midrule[\heavyrulewidth]}
+
+\usepackage{lscape}
+\usepackage{endnotes}
+
+
+\usepackage{epsf,psfrag}
+\usepackage{natbib}
+\usepackage{setspace}
+\usepackage{fullpage}
+
+\usepackage{endnotes}
+\usepackage{natbib}
+\usepackage{amsfonts}
+
+\usepackage{dcolumn}
+
+\usepackage[ bookmarks, colorlinks=true, plainpages = false, citecolor = black, urlcolor = back, filecolor = black, breaklinks]{hyperref}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[hmargin=3.0cm,vmargin=3.0cm]{geometry}
+
+\usepackage{nicefrac}
+\usepackage{pdfsync}
+\usepackage{url}
+
+\usepackage{pdflscape}
+
+\usepackage[T1]{fontenc}
+\usepackage[sc]{mathpazo}
+
+\usepackage{footmisc}
+\usepackage{verbatim}
+\usepackage{times}
+
+\begin{document}
+
+\title{Online Appendix \\ Even Constrained Governments Take:  The Domestic Politics of Transfer and Expropriation Risks}
+\maketitle
+
+
+\author{\textbf{Benjamin A.T. Graham} \emph{\normalsize University of Southern California, School of International Relations}
+
+\textbf{Noel P. Johnston} \emph{\normalsize University of California, Riverside, Department of Political Science}
+
+\textbf{Allison F. Kingsley} \emph{\normalsize University of Vermont, Grossman School of Business}}
+
+
+\ \\
+
+\thanks{{\small Author order is alphabetical by convention. All authors contributed to the paper equally.  
+
+Corresponding author:  benjamin.a.graham@usc.edu.}} 
+
+\thispagestyle{empty}
+
+
+\newpage
+
+
+
+
+\section*{Online Appendix}
+\doublespacing
+
+%The next two commands re-set the page and table numbers and add an "A" to them. 
+\setcounter{table}{0}
+\renewcommand{\thetable}{A\arabic{table}}
+
+\setcounter{page}{1}
+\renewcommand*{\thepage}{A\arabic{page}}
+
+\setcounter{figure}{0}
+\renewcommand{\thefigure}{A\arabic{figure}}
+
+
+\subsection*{Proof of Proposition 1}
+
+Using the process of backwards induction, we begin with the final move of the game; the government's expropriation decision.  First, assume that the investor ($F$) does not expedite the repatriation of his capital ($\epsilon = 0$) (we provide this condition below).
+
+
+Suppose the government ($G$) chooses transfer breach ($t'$). $G$ will play $\neg E$ when his payoff for expropriation ($\omega - C_E - C_T$) is less than his payoff for not expropriating ($R(1 - \mu) + \omega \mu (t' (1 - \epsilon) + t_0 \epsilon) - C_T$).  Solving for $\omega$, and substituting for $\epsilon = 0$, this condition reduces to:
+
+\begin{equation}
+\omega \leq \frac{R(1 - \mu) + C_E}{1 - \mu t'}.
+\end{equation}
+
+\noindent Suppose that the government chooses $t_0$, instead.  $G$ will play $\neg E$ when his expropriation payoff ($\omega - C_E$) is less than his payoff for not expropriating ($R(1 - \mu) + \omega \mu t_0$). Solving for $\omega$, this condition reduces to:
+
+\begin{equation}
+\omega \leq \frac{R(1 - \mu) + C_E}{1 - \mu t_0}.
+\end{equation}
+
+\noindent Notice that, because $t' \geq t_0$, if condition 2 is satisfied, condition 1 will be as well (we thus omit condition 1 in proposition 1). Working backwards, we look at the investors decision to expedite his repatriation at level $\epsilon$.  
+
+The investor will select the amount to expedite which maximizes his expected payoff. While $G$ knows his transfer policy ($t$) before it goes into effect, $F$ only sees a probability $p$ of a change to $t'$.\footnote{We have several reasons for modeling $F$ as unable to observe the value of $C_T$ directly. Investors may be unaware, for example, of impending economic policies that will impact the exchange rate, a new legal loophole to obfuscate theft, an unseen alliance or rivalry between the host government and the investor's home state, or public opinion that has shifted towards anti-investor policies. Kingsley et al. (2016) explores the differing informational capacities of foreign investors, and how this affects their exposure to political risk. For this paper, we simply assume that $F$ is only partially informed about $C_T$.}  If $G$ does not change transfer policy, $F$ will always prefer not to expedite repatriation:
+
+\begin{equation*}
+\frac{\partial}{\partial \epsilon} \left(\omega (1 - \mu) + \omega \mu (1 - t_0) - \lambda \epsilon \right) \leq 0 = -\lambda \leq 0 \Rightarrow \lambda \geq 0
+\end{equation*}
+
+\noindent (which is satisfied by assumption). If $G$ instead plays $t'$, $F$'s preference is conditional. For this SPE, we are looking for a condition under which $F$ will play $\epsilon = 0$.  
+%If $G$ plays $t'$, $F$ would prefer toï¿½.,  
+We see that increasing $\epsilon$ decreases $F$'s payoff ($\omega (1 - \mu) + \omega \mu [(1 - t')(1 - \epsilon) + (1 - t_0)\epsilon] - \lambda \epsilon $) when the first derivative with respect to $\epsilon$ is negative.  Solving for $\lambda$, this reduces to:
+
+\begin{equation}
+\lambda \geq \omega \mu \tau.
+\end{equation}
+
+\noindent Thus, when $\lambda \geq \mu \omega \tau$, $\epsilon = 0$ is optimal, regardless of $p$!
+
+Continuing the backwards induction, with $G$ playing $\neg E$ and and $F$ selecting $\epsilon = 0$, we now look at $G$'s choice of transfer policy.  He will choose $t'$ when the payoff for playing $t_0$ ($R(1 - \mu) + \omega \mu t_0$) is less than the payoff for playing $t'$ ($R (1 - \mu) + \omega \mu t' - C_T$). Solving for $C_T$, the condition reduces to:
+
+\begin{equation}
+C_T \leq \omega \mu \tau.
+\end{equation}
+ 
+\noindent  Solving this condition for $\omega$, we find: $\omega \geq \frac{C_T}{\mu \tau}$. Notice that this will only be consistent with condition 2 when $\frac{R(1-\mu) + C_E}{1 - \mu t_0} \geq \frac{C_T}{\mu \tau}$. Solving for $C_T$, this condition reduces to:
+
+\begin{equation}
+C_T \leq \frac{\mu \tau [R(1-\mu) + C_E]}{1 - \mu t_0}.
+\end{equation}
+
+In this equilibrium, we assume that $F$ sees a $p$-likelihood that $C_T \leq \omega \mu \tau$. Finally, with conditions 1-5, we now analyze the first move of the game: $F$'s decision to invest or not.
+
+$F$ faces a lottery.  He will play $I$ when his expected payoff for investing is greater than his break-even point of not investing (0).  Given the probability of transfer breach ($p$), and the expectation of the moves above, $F$'s expected payoff for investing is a weighted average of his payoff in the case of transfer breach $(\omega (1 - \mu) + \omega \mu (1 - t'))$ and no breach $(\omega (1 - \mu) + \omega \mu (1 - t_0))$: $p [\omega (1 - \mu) + \omega \mu (1 - t')] + (1 - p) [\omega (1 - \mu) + \omega \mu (1 - t_0)]$. Comparing this weighted average to the payoff for not investing (0), and solving for $p$, we see that $F$ will play $I$ when:
+
+\begin{equation}
+p \leq \frac{1 - \mu t_0}{\mu \tau}.\footnote{We model a discrete choice between upholding ($t_0$) and breaching ($t'$) the contract. We could instead model $G$'s choice over a continuous range of transfer policies: $t \in [t_0, 1]$. If $G$ chooses $t$, where $t \in [t_0, 1]$, they would choose between $t_0$ and some $t'$ which optimizes their payoff, upon playing $t'$: $(R(1 - \mu) + \omega \mu t' - C_T)$. Taking the derivative, we see that this payoff is strictly increasing with $t'$. Thus, $G$ optimizes by selecting $t' = 1$ (or $\tau = 1 - t_0$). Substituting $(1 - t_0)$ for $\tau$ alters, for example, Condition 6. However, he implications of the comparative statics analysis remain consistent.}
+\end{equation}
+
+\noindent In words, if $F$ attributes the probability of transfer breach as greater than $\frac{1 - \mu t_0}{\mu \tau}$, he will not invest.\footnote{To explore the effect of increased transfer risk on investment flows, we perform comparative statics on the $p$ parameter. Notice that a shift in $p$ indicates either that the threshold, $C_T^* \leq \omega \mu \tau$, changes, or a characteristic of the distribution (mean or variance) changes. Further study can analyze how each shift may bear on $p$. If, for example, the variance of the cost distribution increases, the effect on $p$ is ambiguous: if $C_T^*$ is less than the mean, more of the distribution will now be to the left of $C^*_T$ ($p$ will increase); if $C_T^*$ is greater than the mean, more will be to the right of $C_T^*$ ($p$ will decrease). In this article, we simply focus on an increase in $p$. We leave this more nuanced discussion for further research.}  
+ 
+We conclude that if $\omega \leq \frac{R(1 - \mu) + C_E}{1 - \mu t_0}$ (condition 2), 
+%$\omega \leq \frac{R(1 - \mu) + C_E}{1 - \mu t_0}$, 
+$\lambda \geq \omega \mu \tau$ (condition 3), $C_T \leq \frac{\mu \tau [R(1-\mu) + C_E]}{1 - \mu t_0}$ (condition 5) 
+%$N$ plays $C_T \leq \omega \mu \tau$, 
+and $p \leq \frac{1 - \mu t_0}{\mu \tau}$ (condition 6), a transfer risk equilibrium (as defined in proposition 1) exists for the game.
+
+
+
+
+\subsection*{Proof of Proposition 2}
+
+We again use the process of backwards induction, beginning with the final move of the game. In this equilibrium however, $G$ chooses between expropriation and transfer breach. 
+
+Suppose that the government ($G$) chooses transfer breach ($t'$) and the investor does not expedite the repatriation of his capital ($\epsilon = 0$). $G$ will play $\neg E$ when his payoff for expropriation ($\omega - C_E - C_T$) is less than his payoff for not expropriating ($R(1 - \mu) + \omega \mu (t' (1 - \epsilon) + t_0 \epsilon) - C_T$).  Solving for $\omega$, and substituting $\epsilon = 0$, this condition reduces to:
+
+\begin{equation}
+\omega \leq \frac{R(1 - \mu) + C_E}{1 - \mu t'}.
+\end{equation}
+
+\noindent Suppose that the government chooses $t_0$, instead.  $G$ will play $E$ when his expropriation payoff ($\omega - C_E$) is greater than his payoff for not expropriating ($R(1 - \mu) + \omega \mu t_0$). Solving for $\omega$, this condition reduces to:
+
+\begin{equation}
+\omega \geq \frac{R(1 - \mu) + C_E}{1 - \mu t_0}.
+\end{equation}
+
+\noindent Notice that, because $t' \geq t_0$, conditions 7 and 8 will always be mutually consistent. Working backwards, we look at the investors decision to expedite his repatriation at level $\epsilon$.  
+
+The investor will select the amount to expedite which maximizes his expected payoff. While $G$ knows his transfer policy ($t$) before it goes into effect, $F$ only sees a probability $p$ of a change to $t'$.  If $G$ does not change transfer policy, $F$ will always prefer not to expedite repatriation:
+
+\begin{equation*}
+\frac{\partial}{\partial \epsilon} (-\omega) \leq 0
+%\left(\omega (1 - \mu) + \omega \mu (1 - t_0) - \lambda \epsilon \right) \leq 0 = -\lambda \leq 0 \Rightarrow \lambda \geq 0
+\end{equation*}
+
+\noindent (which is satisfied: $0 \leq 0$). If $G$ instead plays $t'$, $F$'s preference is conditional. For this subgame perfect Nash equilibrium, we are looking for a condition under which $F$ will play $\epsilon = 0$.  
+%If $G$ plays $tï¿½$, $F$ would prefer toï¿½.,  
+We see that increasing $\epsilon$ decreases $F$'s payoff ($\omega (1 - \mu) + \omega \mu [(1 - t')(1 - \epsilon) + (1 - t_0)\epsilon] - \lambda \epsilon $) when the first derivative with respect to $\epsilon$ is negative.  Solving for $\lambda$, this reduces to:
+
+\begin{equation}
+\lambda \geq \omega \mu \tau.
+\end{equation}
+
+\noindent Thus, when $\lambda \geq \mu \omega \tau$, $\epsilon = 0$ is optimal, regardless of $p$.
+
+Continuing the backwards induction, with $G$ playing $\neg E$ following $t'$ and $E$ following $t_0$, and $F$ selecting $\epsilon = 0$, we now look at $G$'s choice of transfer policy.  He will choose $t'$ when the payoff for playing $t_0$ ($\omega - C_E$) is less than the payoff for playing $t'$ ($R(1 - \mu) + \omega \mu t' - C_T$). Solving for $C_T$, the condition reduces to:
+
+\begin{equation}
+C_T \leq R (1 - \mu) - \omega (1 - \mu t') + C_E.
+\end{equation}
+ 
+\noindent  Solving this condition for $\omega$, we find: $\omega \leq \frac{R(1-\mu) + C_E - C_T}{1 - \mu t'}$. Notice that this condition will satisfy condition 7 as well (because $C_T \geq 0$), but will only be consistent with condition 8 when $\frac{R(1-\mu) + C_E - C_T}{1 - \mu t'} \geq \frac{R(1-\mu) + C_E}{1 - \mu t_0}$. Solving for $C_T$, this condition reduces to:
+
+\begin{equation}
+C_T \leq \frac{\mu \tau [R(1-\mu) + C_E]}{1 - \mu t_0}.
+\end{equation}
+
+
+In this equilibrium, we assume that $F$ 
+%$C_T \leq R (1 - \mu) - \omega (1 - \mu t_0) + C_E$, but that $F$ does not know for sure; he 
+sees a $p$-likelihood that $C_T \leq R (1 - \mu) - \omega (1 - \mu t_0) + C_E$.
+%of it being satisfied. 
+Finally, with conditions 7-11, we now analyze the first move of the game: $F$'s decision to invest or not.
+
+$F$ faces a lottery, but this time, he faces both expropriation and transfer breach.  He will play $I$ when his expected payoff for investing is greater than his break-even point of not investing (0).  Given the probability of transfer breach ($p$), and the expectation of the moves above, $F$'s expected payoff for investing is a weighted average of his payoff in the case of transfer breach $(\omega (1 - \mu) + \omega \mu (1 - t'))$ and no breach $(-\omega)$: $p [\omega (1 - \mu) + \omega \mu (1 - t')] + (1 - p) (-\omega)$. Comparing this weighted average to the payoff for not investing (0), and solving for $p$, we see that $F$ will play $I$ when:
+
+\begin{equation}
+p \geq \frac{1}{2 - \mu t'}.
+\end{equation}
+
+\noindent In words, if $F$ attributes the probability of transfer breach as less than $\frac{1}{2 - \mu t'}$, he will not invest.
+ 
+We conclude that if $\omega \leq \frac{R(1 - \mu) + C_E}{1 - \mu t'}$ (condition 7), $\omega \geq \frac{R(1 - \mu) + C_E}{1 - \mu t_0}$ (condition 8), $\lambda \geq \omega \mu \tau$ (condition 9), $C_T \leq \frac{\mu \tau [R(1-\mu) + C_E]}{1 - \mu t_0}$ (condition 11),
+%$N$ plays $C_T \leq R ( 1 - \mu) - \omega (1 - \mu t') + C_E$, 
+and $ p \geq \frac{1}{2 - \mu t'}$ (condition 12), a political risk equilibrium (as defined in proposition 2) exists for the game.
+
+\pagebreak
+
+
+
+\subsection*{Additional Details Regarding the Credendo Group (ONDD) Data}
+Data based on expert assessments are common in political science, but they have some drawbacks (e.g. Andersson and Heywood 2009; Keman 2007). In particular, experts' assessments of one variable may based, in part, on experts' observations of other variables that they expect are related to the variable they are measuring. For example, Knack (2006) discusses how experts' may use information about political institutions to help form their assessments of corruption. This is problematic for researchers who are trying to study the relationship between political institutions and corruption, because the conventional wisdom regarding the expected relationship between institutions and corruption becomes "baked in" to expert assessments of corruption. In the context of the Credendo measures of political risk, there is a risk that experts may partially base their assessments of political risk on institutional characteristics, like domestic political constraints, generating a spurious correlation between constraints and political risk.
+
+Fortunately, the theory we test in this paper differs substantially enough from the current conventional wisdom that if even if such bias is present in the Credendo measures, it would not make it more likely for us to find support for our hypotheses. Prior to this paper, conventional wisdom can best be characterized as the belief that domestic political constraints reduce political risk of all types. Thus, to the extent that the Credendo Group assessments reflect the conventional wisdom that political constraints reduce risk, there is is no reason the data should reflect this with respect to expropriation risk but not with respect to transfer risk. In other words, to the extent that the data are flawed, there is no reason to expect the data are flawed in a manner that makes it more likely we would find support for our theory.
+
+Also reassuring, Credendo's scoring is not just an expert assessment, it is also the central determinant of a price - the price firms may pay to buy insurance that transfers liability for a given political risk off of themselves and onto Credendo (individual contract prices are, unfortunately, strictly confidential). When Credendo makes errors in its assessments, it loses money, enforcing some discipline on the quality of their measurement. 
+
+While risk data are issued annually, a team at Credendo meets four times per year to update risk evaluations, addressing $\frac{1}{4}$ of countries (by region) in each meeting.  However, if events justify it, a country's risk rating may be revised at a meeting in which it is not otherwise scheduled to be discussed, allowing the potential for multiple revisions during a year (Jensen 2008). Therefore, the annual measure of risk assigned by Credendo can best be interpreted as the level of risk in Q4 of the year in question. 
+
+
+\subsubsection*{Assessing \emph{De Facto} Measures of Transfer Restriction}
+
+We also draw on new data on capital controls from Fernandez et al. (2015) to assess the validity of the Credendo measures we rely on in the body of the paper and to add some empirical evidence to our theoretical discussion of the distinction between capital controls on outflows and capital controls on inflows.\footnote{These measures were originally developed by Schindler (2009). They quantify information provided in the Annual Report on Exchange Arrangements and Exchange Restrictions (AREAER) issued by the International Monetary Fund (IMF).}   Fernandez et al. offer binary measures of whether there are restrictions of any form in place on capital outflows or capital inflows across a variety of asset classes (e.g. direct investment, portfolio equity, bonds, real estate). They also construct additive indices, \emph{kao} (controls on outflows) and \emph{kai} (controls on inflows), that capture the proportion of asset classes across which a government imposes restrictions. To use restrictions on direct investment as an example, within our sample of developing countries 45\% of country-years have restrictions on inflows and 48\% have restrictions on outflows; 27\% have restrictions on both.
+
+The two indices, controls on outflows and controls on inflows, are highly correlated ($\rho = 0.82$); countries that have controls on inflows also tend to have controls on outflows.  However, an examination of the relationship between these indices and the Credendo measures of transfer risk and expropriation risk offers support for our decision to treat these two types of capital control as analytically distinct.
+
+
+
+Table A1 presents the results from regressions in which the Credendo risk measures are used to predict the scope of restrictions of capital inflows and capital outflows. Due to the high correlation between controls on inflows and controls on outflows, we include controls on inflows in some of our models of controls on outflows and vice versa.    
+
+These regressions allow us some empirical purchase on three assertions that we make in the paper: 1). capital controls on outflows are distinct from capital controls on inflows; 2). transfer risk is distinct from expropriation risk; and 3). transfer risk is a valid measure of the risk of costly restrictions on capital outflows. If the Credendo transfer risk rating is a valid measure of the risk of costly transfer restrictions, then transfer risk should be positively correlated with the Fernandez et al. measure of capital controls on outflows. If capital controls on inflows on inflows are distinct from capital controls on outflows, then a similarly strong positive correlation should NOT exist between transfer risk and capital controls on inflows.  If transfer risk is distinct from expropriation risk, then a strong positive relationship should also not be expected between expropriation risk and capital controls on outflows.  
+
+\FloatBarrier
+
+\begin{table}[htbp]\centering
+\footnotesize
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Transfer Risk and De Facto Capital Controls}
+\begin{tabular}{l*{8}{c}}
+\hline\hline
+                                        &\multicolumn{4}{c|}{DV = Controls on Outflows}&\multicolumn{4}{c}{DV = Controls on Inflows}\\
+                                        \hline
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c|}{(4)}&\multicolumn{1}{c}{(5)}&\multicolumn{1}{c}{(6)}&\multicolumn{1}{c}{(7)}&\multicolumn{1}{c}{(8)}\\
+                    \hline
+Transfer Risk       &       0.035**&       0.046**&       0.038\sym{\tau}  &       0.049* &      -0.023\sym{\tau}  &      -0.038**&      -0.021   &      -0.035   \\
+                    &     (0.012)   &     (0.010)   &     (0.022)   &     (0.019)   &     (0.012)   &     (0.010)   &     (0.027)   &     (0.025)   \\
+[1em]
+Expropriation Risk  &       0.019\sym{\tau}  &      -0.006   &       0.018   &      -0.001   &       0.038**&       0.034**&       0.035   &       0.029   \\
+                    &     (0.011)   &     (0.012)   &     (0.022)   &     (0.024)   &     (0.011)   &     (0.011)   &     (0.023)   &     (0.023)   \\
+[1em]
+Controls on Inflows               &               &       0.629**&               &       0.520**&               &               &               &               \\
+                    &               &     (0.049)   &               &     (0.105)   &               &               &               &               \\
+[1em]
+Controls on Outflows                 &               &               &               &               &               &       0.440**&               &       0.365**\\
+                    &               &               &               &               &               &     (0.031)   &               &     (0.090)   \\
+[1em]
+Country FE & NO & NO & YES & YES & NO & NO & YES & YES\\
+[1em]
+Constant            &       0.353**&       0.105* &       0.352**&       0.134   &       0.414**&       0.249**&       0.419**&       0.291**\\
+                    &     (0.063)   &     (0.050)   &     (0.086)   &     (0.088)   &     (0.058)   &     (0.042)   &     (0.099)   &     (0.091)   \\
+\hline
+Observations        &         683   &         683   &         683   &         683   &         683   &         683   &         683   &         683   \\
+\(R^{2}\)           &               &               &       0.024   &       0.209   &               &               &       0.026   &       0.211   \\
+\hline\hline
+\multicolumn{9}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{9}{l}{\footnotesize \sym{\tau} \(p<0.10\), * \(p<0.05\), ** \(p<.01\)}\\
+\multicolumn{9}{l}{\footnotesize Sample restricted to developing countries only.}\\
+\multicolumn{9}{l}{\footnotesize All models report heteroskedacticity-robust standard errors.}\\
+\end{tabular}
+\end{table}
+
+\FloatBarrier
+
+Consistent with our expectations, Table A1 shows a strong positive correlation between transfer risk and capital controls on outflows.  We actually estimate a negative relationship between transfer risk and capital controls on inflows, indicating that transfer risk is indeed a measure of restrictions on capital outflows in particular and not simply a measure of capital controls generally. Similarly, the relationship between expropriation risk and capital controls on outflows is weak with varying sign. These results provide empirical support for both the validity of the Credendo transfer risk rating as a measure of the expected losses imposed on firms via transfer restrictions and for our theoretical argument that transfer risk is distinct from capital controls on inflows. 
+
+Also of note, we see some evidence of a positive relationship between expropriation risk and capital controls on inflows. One plausible explanation for this is that the type of governments that engage in creeping and outright expropriation also tend to intervene heavily in the economy and tend to make efforts to protect domestic firms from foreign competition in particular (i.e. via capital controls on inflows). 
+
+
+
+\subsubsection*{Summary Statistics}\label{B:tables}
+
+Table A2 presents summary statistics for all variables used in the analysis.  Note that, while the the dataset runs from 1994 to 2012, data on \emph{expropriation risk} goes back only through 2002, which shortens the panel in most analyses.
+
+%IF I REDO THIS DON'T FORGET I ADDED THE XCONST ROW POST-HOC -BG
+\begin{table}[htbp]\centering \caption{Summary Statistics \label{sumstat}}
+\footnotesize
+\begin{tabular}{l c c c c c}\hline\hline
+\multicolumn{1}{c}{\textbf{Variable}} & \textbf{Mean}
+ & \textbf{Std. Dev.}& \textbf{Min.} &  \textbf{Max.} & \textbf{N}\\ \hline
+FDI Inflows & 2537 & 13587.899 & -20933.508 & 331591.711 & 2651\\
+FDI (logged) & 19.109 & 2.83 & 2.303 & 26.527 & 2508\\
+Political Constraints (Henisz) & 0.25 & 0.204 & 0 & 0.688 & 2624\\
+Executive Constraints (Polity) & 4.54 &2.01&1 &7&2317\\
+Transfer Risk & 3.811 & 1 & 1 & 4.879 & 2716\\
+Expropriation Risk & 2.844 & 1 & 1 & 4.863 & 1298\\
+Risk Ratio & 1.389 & 0.445 & 0.46 & 2.968 & 1298\\
+Risk Ratio (Ordinal) & 1.522 & 1.165 & 0 & 3 & 1298 \\
+Trade (\% of GDP) & 82.613 & 42.027 & 0.309 & 531.737 & 2537\\
+GDP Per Capita & 2666.342 & 2719.221 & 50.042 & 15171.682 & 2702\\
+GDP Per Capita (logged) & 7.335 & 1.127 & 3.913 & 9.627 & 2702\\
+Reserves (total) & 18628.367 & 138853.998 & 0.041 & 3387512.975 & 2505\\
+Reserves (logged) & 20.915 & 2.293 & 10.617 & 28.851 & 2505\\
+Natural Resource Exports & 24.733 & 27.846 & 0 & 99.740 & 1870\\
+Pegged Ex. Rate & 0.405 & 0.491 & 0 & 1 & 2061\\
+Crawling Ex. Rate & 0.386 & 0.487 & 0 & 1 & 2061\\
+BITs to Date & 10.375 & 12.739 & 0 & 85 & 2939\\
+Population  & 36002307.886 & 139998571.354 & 9188 & 1350695040 & 2810\\
+Population (logged) & 15.584 & 2.037 & 9.125 & 21.024 & 2810\\
+Inflation & 32.601 & 517.923 & -18.109 & 23773.132 & 2314\\
+Inflation (logged) & 3.35 & 0.525 & 0 & 10.077 & 2314\\
+EU Member & 0.023 & 0.15 & 0 & 1 & 2886\\
+Eurozone Member & 0.002 & 0.046 & 0 & 1 & 2886\\
+Controls on Outflows (kao) & 0.519 & 0.395 & 0 & 1 & 1150\\
+Controls on Inflows (kai) & 0.455 & 0.332 & 0 & 1 & 1152\\
+Calendar Year & 2002.983 & 5.47 & 1994 & 2012 & 2939\\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\FloatBarrier
+Figure A1 presents histograms of the three dependent variables used in the paper, \textit{transfer risk}, \textit{expropriation risk} and \textit{risk ratio}, which is a ratio with \textit{transfer risk} as the numerator and \textit{expropriation risk} as the denominator. Ratio dependent variables sometimes have unusual properties, such as extremely large values that can be created as the denominator approaches zero.  Because the minimum value of both \textit{transfer risk} and \textit{expropriation risk} is one, rather than zero, such outlying values are not created in this case. Thus, the distribution depicted in the rightmost panel of Figure A1 is quite normal, with no outlying values.  
+
+\begin{figure}[t]\label{figa1}
+	\centering
+		\includegraphics{FigA1_DV_histograms.pdf}
+		%[width=15.5cm,height=6.5cm]
+	\caption{Histograms of each dependent variable used in this study.}
+\end{figure}
+
+
+\FloatBarrier
+
+\subsection*{Testing the Effect of Transfer Risk on FDI Inflows} 
+The first empirical implication of our model is straightforward and intuitive: higher levels of transfer risk cause smaller inflows of FDI.  This claim is relatively uncontroversial, but demonstrating this relationship empirically is necessary to establish the substantive importance of transfer risk as a deterrent to FDI flows into developing countries. Because transfer risk and expropriation risk are highly correlated $(\rho=0.67)$, we estimate the effect of the level of transfer risk on FDI inflows in a model that also estimates the effect of expropriation risk. As discussed in the body of the paper, we use a measure of expropriation risk that includes both outright expropriation and (non-transfer) creeping expropriation.   
+
+Data on net FDI inflows is drawn from the World Development Indicators (WDI).\footnote{With net FDI inflows, repatriated profits are counted as negative inflows (Kerner 2014). By making profit repatriation more costly, transfer risk reduces flows of repatriated flows of profits, as well as reducing new investment. This means that our measure likely leads us to understate the strength of the negative relationship between FDI and transfer risk.} Because the data on FDI inflows (in USD) is over-dispersed, we use a logged DV.
+
+The relationship between political risk and FDI flows is potentially endogenous -- while we believe that the primary direction of causation runs from political risk to FDI flows, it is also possible that the level of FDI affects the behavior of political actors in ways that alter the level of risk. To address this potential endogeneity, we lag all regressors by one year and employ a systems Generalized Method of Moments (systems GMM) estimator to estimate a dynamic panel model, which includes a lagged dependent variable as a regressor. 
+
+All models include country fixed effects, which control for unobserved sources of heterogeneity across countries,\footnote{Country fixed effects also absorb most of the effect of slow-moving institutional characteristics, such as central bank independence.} and year dummies, which control for both time trends and global capital shocks. Because \emph{transfer risk} and \emph{expropriation risk} are correlated, we estimate each of their effects on FDI within the same model. We consider Model 4 our "primary" specification.\footnote{The data on left governments are drawn from the Database of Political Institutions (Beck et al. 2001).}  
+
+Both types of risk are expected to have independent negative effects on FDI inflows, but the negative effect of \emph{transfer risk} on FDI flows is significant in all models, while the negative effect of \emph{expropriation risk} is significant in only two. Because both risk measures have a standard deviation of 1, the relative size of effects is easy to compare, and we see that transfer risk has almost four times as large an effect in our primary specification (Model 4).  In substantive terms, we estimate that a one-standard deviation increase in transfer risk causes a 27\% decrease in FDI inflows. 
+
+Both in absolute terms, and relative to outright expropriation and (non-transfer) creeping expropriation, transfer risk has a large negative effect on FDI. This finding upholds a core motivation for this paper: transfer risk is an important determinant of global flows of foreign investment. 
+
+All of the control variables have effects consistent with theory, increasing confidence that the model is indeed specified correctly.  Countries attract more FDI when they are wealthier, growing faster, trading more, have lower inflation, and have larger foreign reserves. Pegged exchange rates are associated with low levels of FDI, crawling pegs have an intermediate status, and freely floating exchange rates (the omitted category) are most conducive to attracting FDI. 
+
+In each model, we limit the number of lags of the independent variables used as instruments to three to reduce the problems associated with instrument proliferation (Roodman 2009). Our results are robust to restricting the number of lags to 2, 3, 4, 5, or to not limiting the lags at all. However, these models fail a Sargan over-identification test, indicating that at least one instrument is correlated with the error term.\footnote{The Chi-Squared remains high across specifications.} Therefore in Table A4 we test the robustness of these results to simple linear estimation. In this paper we also vary the lags of the independent variables.   
+
+\FloatBarrier
+
+\begin{table}[htbp]\centering
+\footnotesize
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Political Risk and Investment Inflows: GMM Specifications}
+\begin{tabular}{l*{5}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}        &\multicolumn{1}{c}{(2)}        &\multicolumn{1}{c}{(3)}        &\multicolumn{1}{c}{(4)}        &\multicolumn{1}{c}{(5)}        \\
+\hline
+Transfer Risk       &      -0.543\sym{**}&      -0.364\sym{**}&      -0.392\sym{**}&      -0.375\sym{**}&      -0.306\sym{**}\\
+                    &     (0.130)        &     (0.112)        &     (0.081)        &     (0.082)        &     (0.079)        \\
+[1em]
+Government Risk         &      -0.260\sym{**}&      -0.124        &    -0.133\sym{\tau}&      -0.070        &      -0.053        \\
+                    &     (0.090)        &     (0.085)        &     (0.074)        &     (0.077)        &     (0.080)        \\
+[1em]
+Trade (\% of GDP)   &                    &       0.000        &      -0.000        &       0.001        &      -0.001        \\
+                    &                    &     (0.002)        &     (0.002)        &     (0.002)        &     (0.002)        \\
+[1em]
+GDP Per Capita (logged)&                    &       0.123        &       0.076        &       0.124        &       0.176\sym{*} \\
+                    &                    &     (0.117)        &     (0.087)        &     (0.090)        &     (0.082)        \\
+[1em]
+Reserves (logged)   &                    &       0.258\sym{**}&       0.196\sym{**}&       0.185\sym{**}&       0.227\sym{**}\\
+                    &                    &     (0.083)        &     (0.044)        &     (0.047)        &     (0.050)        \\
+[1em]
+Inflation (logged)  &                    &                    &     0.263\sym{\tau}&       0.305\sym{*} &       0.133        \\
+                    &                    &                    &     (0.136)        &     (0.146)        &     (0.162)        \\
+[1em]
+GDP Growth          &                    &                    &       0.020\sym{**}&       0.021\sym{**}&       0.021\sym{**}\\
+                    &                    &                    &     (0.004)        &     (0.004)        &     (0.006)        \\
+[1em]
+Pegged Ex. Rate     &                    &                    &                    &      -0.342\sym{*} &      -0.128        \\
+                    &                    &                    &                    &     (0.143)        &     (0.144)        \\
+[1em]
+Crawling Ex. Rate   &                    &                    &                    &    -0.226\sym{\tau}&       0.094        \\
+                    &                    &                    &                    &     (0.131)        &     (0.129)        \\
+[1em]
+Left Government     &                    &                    &                    &                    &       0.033        \\
+                    &                    &                    &                    &                    &     (0.104)        \\
+[1em]
+Natural Resource Exports&                    &                    &                    &                    &       0.001        \\
+                    &                    &                    &                    &                    &     (0.002)        \\
+[1em]
+Lagged Dependent Variable&       0.468\sym{**}&       0.479\sym{**}&       0.492\sym{**}&       0.491\sym{**}&       0.429\sym{**}\\
+                    &     (0.055)        &     (0.046)        &     (0.025)        &     (0.026)        &     (0.034)        \\
+[1em]
+Year Dummies &YES&YES&YES&YES&YES\\
+[1em]
+Country Fixed Effects & YES &YES&YES&YES&YES\\
+[1em]
+Constant            &      13.159\sym{**}&       5.673\sym{**}&       6.366\sym{**}&       6.047\sym{**}&       6.146\sym{**}\\
+                    &     (1.059)        &     (1.857)        &     (1.076)        &     (1.209)        &     (1.284)        \\
+\hline
+Observations        &        1088        &        1004        &         952        &         829        &         707        \\
+\hline\hline
+\multicolumn{6}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{6}{l}{\footnotesize All independent variables are lagged one year. Sample is developing countries only.}\\
+\multicolumn{6}{l}{\footnotesize Model 3 reports GMM SEs because robust standard errors could not be computed.}\\
+\multicolumn{6}{l}{\footnotesize \sym{\tau} \(p<0.10\), \sym{*} \(p<0.05\), \sym{**} \(p<.01\)}\\
+\end{tabular}
+\end{table}
+
+
+\FloatBarrier
+
+\begin{table}[htbp]\centering
+\footnotesize
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Political Risk and Investment Inflows: Linear Models}
+\begin{tabular}{l*{4}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}\\               
+\hline
+Transfer Risk       &      -0.244\sym{*} &      -0.208\sym{**}&      -0.214\sym{*} &      -0.191\sym{*} \\
+                    &     (0.106)        &     (0.079)        &     (0.108)        &     (0.082)        \\
+[1em]
+Expropriation Risk  &       0.025        &       0.056        &      -0.007        &       0.028        \\
+                    &     (0.084)        &     (0.067)        &     (0.097)        &     (0.081)        \\
+[1em]
+Trade (\% of GDP)   &       0.005        &       0.000        &       0.004        &      -0.001        \\
+                    &     (0.003)        &     (0.003)        &     (0.004)        &     (0.004)        \\
+[1em]
+GDP Per Capita (logged)&       0.042        &      -0.079        &      -0.135        &      -0.148        \\
+                    &     (0.480)        &     (0.389)        &     (0.621)        &     (0.489)        \\
+[1em]
+Reserves (logged)   &                    &                    &       0.158\sym{*} &       0.086        \\
+                    &                    &                    &     (0.068)        &     (0.055)        \\
+[1em]
+Pegged Ex. Rate     &                    &                    &      -0.185        &      -0.137        \\
+                    &                    &                    &     (0.147)        &     (0.126)        \\
+[1em]
+Crawling Ex. Rate   &                    &                    &       0.144        &       0.088        \\
+                    &                    &                    &     (0.135)        &     (0.104)        \\
+[1em]
+GDP Growth          &                    &                    &       0.016\sym{**}&       0.015\sym{*} \\
+                    &                    &                    &     (0.006)        &     (0.007)        \\
+[1em]
+Inflation (logged)  &                    &                    &       0.153        &       0.057        \\
+                    &                    &                    &     (0.220)        &     (0.171)        \\
+[1em]
+Lagged Dependent Variable        &                    &       0.335\sym{**}&                    &       0.297\sym{**}\\
+                    &                    &     (0.039)        &                    &     (0.045)        \\
+[1em]
+Country Fixed Effects& YES&YES&YES&YES\\
+[1em]
+Year Dummies & YES&YES&YES&YES\\
+[1em]
+Constant            &      21.044\sym{**}&      15.089\sym{**}&      18.319\sym{**}&      14.457\sym{**}\\
+                    &     (3.618)        &     (3.049)        &     (4.754)        &     (3.826)        \\
+\hline
+Observations        &        1057        &        1034        &         850        &         829        \\
+\(R^{2}\)           &       0.395        &       0.488        &       0.414        &       0.487        \\
+\hline\hline
+\multicolumn{5}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{5}{l}{\footnotesize Sample is developing countries only.}\\
+\multicolumn{5}{l}{\footnotesize \sym{\tau} \(p<0.10\), \sym{*} \(p<0.05\), \sym{**} \(p<.01\)}\\
+\end{tabular}
+\end{table}
+
+Table A4 examines a set of linear panel models with and without a lagged dependent variable included as a regressor. Because Models 2 \& 4 contain both country-fixed effects and a lagged regressor as a DV, the estimates in these regressions may suffer from Nickel bias. For this reason, these estimates are somewhat inferior to those presented in Table A3. Nonetheless, we find that our results are consistent across these alternative specifications; the estimated effect of transfer risk on FDI flows is negative in all four models. The estimated effect of expropriation risk, once transfer risk is controlled for, is near zero. These results shore up our confidence that transfer risk is indeed a deterrent to global flows of FDI and that the negative effect of transfer risk on FDI that we estimate in Table A3 is not an artifact of any particular estimation strategy. 
+
+\FloatBarrier
+
+\subsection*{Robustness Tests for Hypotheses 1-3}
+\subsubsection*{Seemingly Unrelated Regressions}
+Table A5 presents alternative specifications for the tests of Hypotheses 1 and 2.  These results are from pairs of Seemingly Unrelated Regressions, a type of estimation which allows the errors between models to be correlated.  Specifically, it is possible that the the errors from models predicting transfer risk may be correlated with the errors from models predicting expropriation risk, so we pair these models together and estimate them jointly. These results are consistent with the models shown in Table 1: a strong negative relationship is observed between political constraints and expropriation risk and an ambiguous relationship (here weakly negative in both models) is observed between political constraints and transfer risk. 
+
+As with the results in Table 1, we use z-tests to compare the estimated effect of \emph{political constraints} on \emph{transfer risk} and on \emph{government risk} and in both pairs of models we find the difference between these estimated effects to be statistically significant (p<.05).  
+
+
+\begin{table}[htbp]\centering
+\footnotesize
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{The Effect of Political Constraints on Expropriation and Transfer Risk: SUR}
+\begin{tabular}{l*{4}{c}}
+\hline\hline
+                     &\multicolumn{1}{c}{Expropriation}            &\multicolumn{1}{c|}{Transfer}                  &\multicolumn{1}{c}{Expropriation}            &\multicolumn{1}{c}{Transfer}                     \\
+\hline
+                    &\multicolumn{2}{c|}{(1)}                    &\multicolumn{2}{c}{(2)}                  \\
+
+\hline
+Political Constraints&      -0.506\sym{**}&      -0.067        &      -0.588\sym{**}&      -0.067        \\
+                    &     (0.103)        &     (0.079)        &     (0.123)        &     (0.095)        \\
+[1em]
+Trade (\% of GDP)   &       0.003\sym{*} &    -0.001\sym{\tau}&       0.005\sym{**}&      -0.001        \\
+                    &     (0.001)        &     (0.001)        &     (0.001)        &     (0.001)        \\
+[1em]
+GDP Per Capita (logged)&      -0.182        &      -0.393\sym{**}&      -0.406\sym{*} &      -0.204        \\
+                    &     (0.149)        &     (0.114)        &     (0.186)        &     (0.145)        \\
+[1em]
+GDP Growth          &       0.001        &       0.000        &       0.004        &      -0.005\sym{*} \\
+                    &     (0.002)        &     (0.002)        &     (0.003)        &     (0.003)        \\
+[1em]
+Reserves (logged)   &      -0.011        &      -0.038\sym{*} &       0.072\sym{*} &      -0.036        \\
+                    &     (0.025)        &     (0.019)        &     (0.036)        &     (0.028)        \\
+[1em]
+Inflation (logged)  &       0.070        &       0.101\sym{*} &       0.138        &       0.166\sym{*} \\
+                    &     (0.057)        &     (0.044)        &     (0.085)        &     (0.066)        \\
+[1em]
+BITs to Date        &      -0.027\sym{**}&      -0.006        &      -0.022\sym{**}&      -0.008        \\
+                    &     (0.006)        &     (0.004)        &     (0.007)        &     (0.005)        \\
+[1em]
+Pegged Ex. Rate     &                    &                    &      -0.100        &       0.005        \\
+                    &                    &                    &     (0.066)        &     (0.051)        \\
+[1em]
+Crawling Ex. Rate   &                    &                    &      -0.052        &       0.144\sym{**}\\
+                    &                    &                    &     (0.054)        &     (0.042)        \\
+[1em]
+Natural Resource Exports&                    &                    &       0.003\sym{*} &      -0.001        \\
+                    &                    &                    &     (0.002)        &     (0.001)        \\
+[1em]
+Constant            &       4.444\sym{**}&       6.744\sym{**}&       3.557\sym{**}&       5.122\sym{**}\\
+                    &     (1.112)        &     (0.855)        &     (1.366)        &     (1.060)        \\
+\hline
+Observations        &        1075        &    1075                &         813        &         813           \\
+\(R^{2}\)           &       0.868        &       0.938        &       0.860        &       0.934        \\
+\hline\hline
+\multicolumn{5}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{5}{l}{\footnotesize Sample restricted to developing countries only. Seemingly Unrelated Regressions.}\\
+\multicolumn{5}{l}{\footnotesize All models include country and year fixed effects (via dummy variables).}\\
+\multicolumn{5}{l}{\footnotesize \sym{\tau} \(p<0.10\), \sym{*} \(p<0.05\), \sym{**} \(p<.01\)}\\
+\end{tabular}
+\end{table}
+
+\FloatBarrier
+
+\subsubsection*{Opting Not to Lag the Independent Variables}
+Table A6 presents results from models identical to those in Tables 1 and Table 2 in the paper. The only difference is that the dependent variable is not lagged by one year. The results are almost identical to those in the body of the paper. We see a strong negative effect of political constraints on expropriation risk (Models 1 \& 2), a near zero effect on transfer risk (Models 3 \& 4) and a positive effect on the ratio of transfer risk to expropriation risk (Models 5 \& 6).
+
+\begin{table}[htbp]\centering
+\footnotesize
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{The Effect of Political Constraints on Political Risk: No Lag}
+\begin{tabular}{l*{6}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c|}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c|}{(4)}&\multicolumn{1}{c}{(5)}&\multicolumn{1}{c}{(6)}\\
+                    \hline
+
+                    &\multicolumn{2}{c|}{Government Risk}&\multicolumn{2}{c|}{Transfer Risk}&\multicolumn{2}{c}{Risk Ratio}\\
+\hline
+Political Constraints&      -0.550\sym{*} &      -0.653\sym{*} &      -0.010        &      -0.005        &       0.306\sym{*} &       0.393\sym{*} \\
+                    &     (0.275)        &     (0.309)        &     (0.113)        &     (0.140)        &     (0.137)        &     (0.166)        \\
+[1em]
+Trade (\% of GDP)   &       0.002        &       0.004        &    -0.002\sym{\tau}&      -0.002        &    -0.002\sym{\tau}&    -0.003\sym{\tau}\\
+                    &     (0.002)        &     (0.003)        &     (0.001)        &     (0.002)        &     (0.001)        &     (0.002)        \\
+[1em]
+GDP Per Capita (logged)&      -0.081        &      -0.192        &      -0.512\sym{*} &      -0.523        &      -0.121        &      -0.094        \\
+                    &     (0.246)        &     (0.336)        &     (0.243)        &     (0.336)        &     (0.159)        &     (0.213)        \\
+[1em]
+GDP Growth          &       0.000        &       0.004        &       0.000        &      -0.004        &      -0.002        &      -0.005        \\
+                    &     (0.002)        &     (0.004)        &     (0.002)        &     (0.003)        &     (0.002)        &     (0.003)        \\
+[1em]
+Reserves (logged)   &      -0.016        &       0.073        &      -0.023        &      -0.014        &      -0.001        &      -0.009        \\
+                    &     (0.056)        &     (0.089)        &     (0.038)        &     (0.064)        &     (0.043)        &     (0.070)        \\
+[1em]
+Inflation (logged)  &       0.156        &       0.188        &       0.129\sym{*} &       0.233\sym{*} &      -0.038        &      -0.013        \\
+                    &     (0.112)        &     (0.139)        &     (0.056)        &     (0.101)        &     (0.066)        &     (0.084)        \\
+[1em]
+BITs to Date        &      -0.034\sym{**}&      -0.028\sym{*} &      -0.006        &      -0.007        &     0.015\sym{\tau}&       0.011        \\
+                    &     (0.011)        &     (0.012)        &     (0.008)        &     (0.011)        &     (0.008)        &     (0.009)        \\
+[1em]
+Pegged Ex. Rate     &                    &       0.037        &                    &       0.025        &                    &       0.009        \\
+                    &                    &     (0.101)        &                    &     (0.080)        &                    &     (0.073)        \\
+[1em]
+Crawling Ex. Rate   &                    &       0.003        &                    &       0.093        &                    &       0.052        \\
+                    &                    &     (0.083)        &                    &     (0.067)        &                    &     (0.060)        \\
+[1em]
+Natural Resource Exports&                    &       0.004        &                    &      -0.000        &                    &      -0.002        \\
+                    &                    &     (0.004)        &                    &     (0.002)        &                    &     (0.002)        \\
+[1em]
+Country Fixed Effects & YES &YES&YES&YES&YES&YES\\
+[1em]
+Year Dummies &YES&YES&YES&YES&YES&YES\\
+[1em]
+
+Constant            &     3.805\sym{\tau}&       2.056        &       7.894\sym{**}&       7.385\sym{**}&       2.318        &       2.321        \\
+                    &     (2.094)        &     (2.946)        &     (1.874)        &     (2.378)        &     (1.439)        &     (2.064)        \\
+\hline
+Observations        &        1074        &         737        &        1163        &         773        &        1074        &         737        \\
+\(R^{2}\)           &       0.136        &       0.150        &       0.307        &       0.375        &       0.065        &       0.066        \\
+\hline\hline
+\multicolumn{7}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{7}{l}{\footnotesize Sample restricted to developing countries only.}\\
+\multicolumn{7}{l}{\footnotesize All models report heteroskedacticity-robust standard errors.}\\
+\multicolumn{7}{l}{\footnotesize \sym{\tau} \(p<0.10\), \sym{*} \(p<0.05\), \sym{**} \(p<.01\)}\\
+\end{tabular}
+\end{table}
+
+\FloatBarrier
+\subsubsection*{Removing the Country Fixed Effects (i.e. Estimation Via GLS)}
+Table A7 is structured parallel to Table A6, presenting more alternative estimations of the relationship between political constraints and expropriation risk, transfer risk and the ratio of transfer risk to expropriation risk. This table demonstrates the robustness of our results to GLS estimation -- i.e. to linear panel regressions without country fixed effects.  These specifications include some additional control variables that are used in the fixed effects context -- population and EU and Eurozone membership.  Because our sample is limited to developing countries, the EU members in the sample are primarily in Eastern Europe.  These three control variables are not included in the fixed effects models because they have little over-time variation in the 2002-2012 period covered in most of our analyses.  
+
+In general, GLS models run on country-year data are prone to omitted variable bias -- there are many unobservable factors, including various aspects of culture, that vary across countries and may effect both political constraints and political risk. Thus, these models are inferior to those presented in the paper with regard to our ability to make even cautious causal inference.  However, they are useful in that they correspond directly to the proposition in the title of the paper, which is that even constrained governments take. Because the models in the body of the paper contain country fixed effects, they test something that might be more appropriately phrased as "Governments take even when they are constrained."
+
+The results here in Table A7 match those in Tables 1 and 2 closely. They provide additional support for Hypotheses 1, 2, and 3. 
+
+\begin{table}[htbp]\centering
+\footnotesize
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{The Effect of Political Constraints on Political Risk: GLS}
+\begin{tabular}{l*{6}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c|}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c|}{(4)}&\multicolumn{1}{c}{(5)}&\multicolumn{1}{c}{(6)}\\
+                    \hline
+                    &\multicolumn{2}{c|}{Government Risk}&\multicolumn{2}{c|}{Transfer Risk}&\multicolumn{2}{c}{Risk Ratio}\\
+\hline
+Political Constraints&      -0.564\sym{**}&      -0.590\sym{**}&      -0.088        &      -0.023        &       0.292\sym{**}&       0.336\sym{**}\\
+                    &     (0.198)        &     (0.211)        &     (0.107)        &     (0.130)        &     (0.107)        &     (0.129)        \\
+[1em]
+Trade (\% of GDP)   &       0.002        &       0.002        &      -0.002\sym{**}&    -0.002\sym{\tau}&      -0.002\sym{**}&      -0.003\sym{**}\\
+                    &     (0.002)        &     (0.002)        &     (0.001)        &     (0.001)        &     (0.001)        &     (0.001)        \\
+[1em]
+GDP Per Capita (logged)&      -0.250\sym{**}&      -0.376\sym{**}&      -0.480\sym{**}&      -0.504\sym{**}&       0.009        &       0.039        \\
+                    &     (0.089)        &     (0.106)        &     (0.065)        &     (0.077)        &     (0.045)        &     (0.054)        \\
+[1em]
+Reserves (logged)   &      -0.050        &       0.031        &    -0.055\sym{\tau}&      -0.048        &      -0.008        &      -0.028        \\
+                    &     (0.053)        &     (0.078)        &     (0.033)        &     (0.054)        &     (0.028)        &     (0.040)        \\
+[1em]
+Inflation (logged)  &       0.144        &       0.252\sym{*} &       0.101\sym{*} &     0.169\sym{\tau}&      -0.053        &      -0.089        \\
+                    &     (0.098)        &     (0.116)        &     (0.046)        &     (0.093)        &     (0.063)        &     (0.079)        \\
+[1em]
+GDP Growth          &       0.002        &       0.005        &      -0.001        &    -0.005\sym{\tau}&      -0.002        &      -0.005\sym{*} \\
+                    &     (0.002)        &     (0.004)        &     (0.002)        &     (0.003)        &     (0.002)        &     (0.003)        \\
+[1em]
+BITs to Date        &      -0.021\sym{**}&      -0.016\sym{**}&      -0.006        &      -0.004        &       0.008\sym{*} &       0.008\sym{*} \\
+                    &     (0.006)        &     (0.005)        &     (0.005)        &     (0.005)        &     (0.003)        &     (0.003)        \\
+[1em]
+EU Member           &    -0.196\sym{\tau}&    -0.187\sym{\tau}&      -0.153        &      -0.123        &       0.053        &       0.043        \\
+                    &     (0.111)        &     (0.107)        &     (0.131)        &     (0.122)        &     (0.202)        &     (0.199)        \\
+[1em]
+Eurozone Member     &      -0.144        &       0.283        &      -0.493\sym{*} &      -0.694\sym{**}&      -0.426        &      -0.894\sym{**}\\
+                    &     (0.228)        &     (0.232)        &     (0.198)        &     (0.162)        &     (0.338)        &     (0.136)        \\
+[1em]
+Population (logged) &       0.237\sym{**}&       0.126        &      -0.198\sym{**}&      -0.206\sym{**}&      -0.185\sym{**}&      -0.166\sym{**}\\
+                    &     (0.070)        &     (0.089)        &     (0.058)        &     (0.073)        &     (0.039)        &     (0.052)        \\
+[1em]
+Pegged Ex. Rate     &                    &      -0.033        &                    &      -0.005        &                    &       0.025        \\
+                    &                    &     (0.077)        &                    &     (0.083)        &                    &     (0.061)        \\
+[1em]
+Crawling Ex. Rate   &                    &      -0.023        &                    &       0.069        &                    &       0.039        \\
+                    &                    &     (0.069)        &                    &     (0.068)        &                    &     (0.056)        \\
+[1em]
+Natural Resource Exports    &                    &       0.006\sym{*} &                    &       0.002        &                    &      -0.002        \\
+                    &                    &     (0.002)        &                    &     (0.001)        &                    &     (0.001)        \\
+[1em]
+Country Fixed Effects & NO &NO&NO&NO&NO&NO\\
+[1em]
+Year Dummies &YES&YES&YES&YES&YES&YES\\
+[1em]
+Constant            &       1.897        &       2.092\sym{*} &      11.601\sym{**}&      11.344\sym{**}&       4.620\sym{**}&       4.747\sym{**}\\
+                    &     (1.189)        &     (1.066)        &     (0.777)        &     (0.861)        &     (0.596)        &     (0.641)        \\
+\hline
+Observations        &         985        &         741        &        1061        &         773        &         985        &         741        \\
+\(R^{2}\)           &                    &                    &                    &                    &                    &                    \\
+\hline\hline
+\multicolumn{7}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{7}{l}{\footnotesize Sample restricted to developing countries only.}\\
+\multicolumn{7}{l}{\footnotesize All models report heteroskedacticity-robust standard errors.}\\
+\multicolumn{7}{l}{\footnotesize \sym{\tau} \(p<0.10\), \sym{*} \(p<0.05\), \sym{**} \(p<.01\)}\\
+\end{tabular}
+\end{table}
+
+\FloatBarrier
+\subsubsection*{Systems GMM Estimation}
+Table A8 is again parallel to Tables A6 and A7, only applying systems GMM estimation. One way to reduce the risk that observed effects are driven by reverse causation is to include a 1-year lag of the dependent variable as a regressor. In a linear panel regression context, this inclusion of a lagged DV can introduce Nickel bias. Thus, we turn to a systems GMM specification as an alternative.
+
+To limit instrument proliferation, we restrict the model to using two lags of each independent variable as instruments.\footnote{We employ the xtdpdsys command in Stata 13 and use the maxlags(2) option.} This produces a total of 187 instruments; in a Sargan test of over identification, we fail to reject the null hypothesis of no over identification (p = .99).\footnote{These numbers are drawn from Model 6 but are similar for the other models in the table.}  
+
+Overall, we prefer the simpler models in the paper, but it is reassuring that our results are similar in these specifications.  The negative effect of political constraints on expropriation risk that  we estimate here falls just short of statistical significance (p =.053 in Model 1, p = .050 in model 2), but all of the results are directionally correct and the risk ratio result in the main model is statistically significant (p<.05). If we use the coefficients on political constraints from models 2 and 4 to calculate a z-test of whether the negative effect of political constraints on expropriation risk is stronger than the negative effect on transfer risk, we are able to reject the null of no difference at p< .05.\footnote{This result is statistically significant because the estimate effect of political constraints on transfer risk is slightly positive.}  
+
+Thus, these results boost our confidence that the results we present in the paper are not driven by the choice of estimation strategy, but represent a real and robust pattern or relationships between the variables of interest. These results also increase our confidence that the negative relationship between political constraints and expropriation risk and the positive relationship between political constraints and risk ratio are causal and not spurious. 
+
+
+\begin{table}[htbp]\centering
+\footnotesize
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{The Effect of Political Constraints on Political Risk: GMM Models}
+\begin{tabular}{l*{6}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}        &\multicolumn{1}{c|}{(2)}        &\multicolumn{1}{c}{(3)}        &\multicolumn{1}{c|}{(4)}        &\multicolumn{1}{c}{(5)}        &\multicolumn{1}{c}{(6)}        \\
+\hline
+      &\multicolumn{2}{c|}{Government Risk}&\multicolumn{2}{c|}{Transfer Risk}&\multicolumn{2}{c}{Risk Ratio}\\
+\hline
+Political Constraints&    -0.295\sym{\tau}&    -0.365\sym{\tau}&       0.030        &       0.066        &     0.158\sym{\tau}&       0.254\sym{*} \\
+                    &     (0.152)        &     (0.186)        &     (0.094)        &     (0.122)        &     (0.093)        &     (0.127)        \\
+[.5em]
+Trade (\% of GDP)   &      -0.001        &       0.001        &      -0.000        &      -0.000        &      -0.000        &      -0.001        \\
+                    &     (0.001)        &     (0.001)        &     (0.001)        &     (0.001)        &     (0.001)        &     (0.001)        \\
+[.5em]
+GDP Per Capita (logged)&      -0.145\sym{**}&      -0.158\sym{**}&      -0.041        &      -0.118\sym{**}&       0.052\sym{*} &       0.065\sym{*} \\
+                    &     (0.043)        &     (0.043)        &     (0.027)        &     (0.022)        &     (0.026)        &     (0.027)        \\
+[.5em]
+GDP Growth          &      -0.001        &       0.000        &      -0.003        &      -0.001        &       0.002        &       0.002        \\
+                    &     (0.004)        &     (0.004)        &     (0.002)        &     (0.003)        &     (0.003)        &     (0.003)        \\
+[.5em]
+Reserves (logged)   &       0.028        &       0.035        &      -0.018        &      -0.024        &    -0.024\sym{\tau}&    -0.030\sym{\tau}\\
+                    &     (0.025)        &     (0.026)        &     (0.014)        &     (0.020)        &     (0.013)        &     (0.017)        \\
+[.5em]
+Inflation (logged)  &     0.157\sym{\tau}&       0.173        &       0.029        &       0.109        &      -0.033        &      -0.015        \\
+                    &     (0.086)        &     (0.111)        &     (0.061)        &     (0.102)        &     (0.052)        &     (0.077)        \\
+[.5em]
+BITs to Date        &      -0.006\sym{*} &      -0.005        &      -0.005\sym{**}&      -0.005\sym{*} &       0.001        &       0.000        \\
+                    &     (0.003)        &     (0.003)        &     (0.002)        &     (0.002)        &     (0.001)        &     (0.002)        \\
+[.5em]
+Pegged Ex. Rate     &                    &      -0.059        &                    &      -0.010        &                    &       0.016        \\
+                    &                    &     (0.082)        &                    &     (0.048)        &                    &     (0.057)        \\
+[.5em]
+Crawling Ex. Rate   &                    &    -0.142\sym{\tau}&                    &      -0.021        &                    &       0.062        \\
+                    &                    &     (0.084)        &                    &     (0.055)        &                    &     (0.057)        \\
+[.5em]
+Natural Resource Exports&                    &       0.002        &                    &       0.001        &                    &      -0.001        \\
+                    &                    &     (0.002)        &                    &     (0.001)        &                    &     (0.001)        \\
+[.5em]
+Expropriation Risk (Lagged)&       0.753\sym{**}&       0.769\sym{**}&                    &                    &                    &                    \\
+                    &     (0.062)        &     (0.067)        &                    &                    &                    &                    \\
+[.5em]
+Transfer Risk (Lagged)    &                    &                    &       0.839\sym{**}&       0.757\sym{**}&                    &                    \\
+                    &                    &                    &     (0.036)        &     (0.037)        &                    &                    \\
+[.5em]
+Risk Ratio (Lagged)    &                    &                    &                    &                    &       0.801\sym{**}&       0.792\sym{**}\\
+                    &                    &                    &                    &                    &     (0.050)        &     (0.048)        \\
+[.5em]
+Country Fixed Effects &YES&YES&YES&YES&YES&YES\\
+[.5em]
+Year Dummies &YES&YES&YES&YES&YES&YES\\
+[.5em]
+Constant            &       0.758        &       0.605        &       1.327\sym{**}&       1.999\sym{**}&     0.502\sym{\tau}&       0.490        \\
+                    &     (0.570)        &     (0.575)        &     (0.481)        &     (0.619)        &     (0.297)        &     (0.482)        \\
+\hline
+Observations        &         973        &         653        &        1163        &         773        &         973        &         653        \\
+\hline\hline
+\multicolumn{7}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{7}{l}{\footnotesize Sample restricted to developing countries only}\\
+\multicolumn{7}{l}{\footnotesize All IV's are treated as endogenous but are not lagged.}\\
+\multicolumn{7}{l}{\footnotesize Limit of 2 lags used as independent variables}\\
+\multicolumn{7}{l}{\footnotesize \sym{\tau} \(p<0.10\), \sym{*} \(p<0.05\), \sym{**} \(p<.01\)}\\
+\end{tabular}
+\end{table}
+
+\FloatBarrier
+
+\subsubsection*{Replacing Political Constraints with XCONST}
+Table A9 tests the robustness of our results to an alternative measure of political constraints: the \emph{XCONST} measure from the Polity IV dataset (Marshall and Jaggers 2002)  \emph{XCONST} is a categorical variable that can take on seven values ranging from "Unlimited Authority" to "Executive Parity or Subordination."  It evaluates constraints placed on executive action by "accountability groups" broadly defined. We prefer the Henisz measure of political constraints because it draws on information regarding both the number of independent political institutions with veto power and on the preferences of the political actors within those institutions.  This information is fed into a relatively simple structural model, which is used to estimate the feasibility of policy change. While \emph{XCONST} and \emph{political constraints} are designed to capture the same theoretical construct, the two measures are correlated at only .68 in our sample, which suggests there is substantial divergence between them in practice.\footnote{By comparison, the \emph{polcomp} component of the polity IV democracy measure, which ostensibly measures a component of democracy theoretically distinct from \emph{XCONST}, is correlated with \emph{XCONST} at .79 in our sample.} Nonetheless, the results in Table A9 show that the alternative \emph{XCONST} measure also produces results consistent with our theoretical expectations.
+ 
+Consistent with Hypotheses 1 and 2, the estimated effect of \emph{XCONST} on \emph{Expropriation Risk} (Models 1 \& 2) is strongly negative, while the effect on \emph{Transfer Risk} is near zero -- weakly positive in Model 3 and weakly negative in Model 4. Consistent with Hypothesis 3, in Models 5 \& 6, the effect of \emph{XCONST} on \emph{risk ratio} is both positive and statistically significant. This demonstrates that the results we present in the body of the paper are not driven by any peculiarities specific to the Henisz measure of political constraints, and are robust to the alternative measure from Polity IV.      
+
+\begin{table}[htbp]\centering
+\footnotesize
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Robustness Checks: XCONST in Place of Political Constraints}
+\begin{tabular}{l*{6}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c|}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c|}{(4)}&\multicolumn{1}{c}{(5)}&\multicolumn{1}{c}{(6)}\\
+                    \hline
+                    &\multicolumn{2}{c|}{DV=Expropriation Risk}&\multicolumn{2}{c|}{DV=Transfer Risk}&\multicolumn{2}{c}{DV=Risk Ratio}                 \\
+                    \hline
+Executive Constraints&    -0.105\sym{\tau}&    -0.119\sym{\tau}&       0.011        &      -0.008        &       0.040\sym{*} &       0.043\sym{*} \\
+                    &     (0.056)        &     (0.064)        &     (0.023)        &     (0.032)        &     (0.018)        &     (0.021)        \\
+[1em]
+Trade (\% of GDP)   &       0.002        &       0.004        &      -0.002        &      -0.000        &    -0.002\sym{\tau}&      -0.003        \\
+                    &     (0.002)        &     (0.003)        &     (0.001)        &     (0.002)        &     (0.001)        &     (0.002)        \\
+[1em]
+GDP Per Capita (logged)&      -0.185        &      -0.275        &      -0.267        &       0.007        &       0.064        &       0.178        \\
+                    &     (0.260)        &     (0.339)        &     (0.238)        &     (0.304)        &     (0.176)        &     (0.245)        \\
+[1em]
+GDP Growth          &       0.005        &     0.007\sym{\tau}&      -0.004        &      -0.009\sym{*} &    -0.005\sym{\tau}&      -0.009\sym{*} \\
+                    &     (0.003)        &     (0.004)        &     (0.003)        &     (0.004)        &     (0.003)        &     (0.003)        \\
+[1em]
+Reserves (logged)   &      -0.014        &       0.021        &      -0.041        &      -0.024        &       0.001        &       0.025        \\
+                    &     (0.048)        &     (0.078)        &     (0.036)        &     (0.061)        &     (0.040)        &     (0.063)        \\
+[1em]
+Inflation (logged)  &       0.130        &       0.206        &     0.092\sym{\tau}&       0.110        &      -0.052        &      -0.108        \\
+                    &     (0.114)        &     (0.126)        &     (0.054)        &     (0.111)        &     (0.087)        &     (0.099)        \\
+[1em]
+BITs to Date        &      -0.026\sym{**}&      -0.022\sym{*} &      -0.006        &      -0.009        &       0.008        &       0.005        \\
+                    &     (0.009)        &     (0.009)        &     (0.008)        &     (0.010)        &     (0.008)        &     (0.009)        \\
+[1em]
+Pegged Ex. Rate     &                    &      -0.119        &                    &      -0.000        &                    &       0.092        \\
+                    &                    &     (0.086)        &                    &     (0.089)        &                    &     (0.075)        \\
+[1em]
+Crawling Ex. Rate   &                    &      -0.073        &                    &       0.100        &                    &       0.095        \\
+                    &                    &     (0.074)        &                    &     (0.069)        &                    &     (0.062)        \\
+[1em]
+Natural Resource Exports&                    &       0.004        &                    &      -0.001        &                    &      -0.002        \\
+                    &                    &     (0.005)        &                    &     (0.002)        &                    &     (0.002)        \\
+[1em]
+Constant            &       4.683\sym{*} &       4.166        &       6.478\sym{**}&     3.974\sym{\tau}&       1.025        &      -0.098        \\
+                    &     (1.978)        &     (2.515)        &     (1.788)        &     (2.113)        &     (1.429)        &     (1.871)        \\
+\hline
+Observations        &         958        &         727        &        1050        &         760        &         958        &         727        \\
+\(R^{2}\)           &       0.125        &       0.124        &       0.263        &       0.315        &       0.063        &       0.076        \\
+\hline\hline
+\multicolumn{7}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{7}{l}{\footnotesize Sample restricted to developing countries only.}\\
+\multicolumn{7}{l}{\footnotesize All models are linear regressions with country fixed effects and controls for non-linear time trends.}\\
+\multicolumn{7}{l}{\footnotesize \sym{\tau} \(p<0.10\), \sym{*} \(p<0.05\), \sym{**} \(p<.01\)}\\
+\end{tabular}
+\end{table}
+
+
+\FloatBarrier
+\subsubsection*{The Effect of Left Governments}
+In Table A10 we add a dummy variable for left governments to the regressions. Conventional wisdom suggests that left governments should be associated with higher levels of expropriation risk.\footnote{Pinto (2013) offers a detailed, and more nuanced, discussion of the relationship between left governments and foreign direct investors.} Thus, some commenters have requested an examination of the effect of partisanship on our results.
+
+We omit the dummy for left parties from the main regressions in the body of the paper because we have sufficient reason to expect left government to confound the relationship between political constraints and either transfer or expropriation risk. In order to induce a problem of omitted variable bias in our results, left government would need to be causally related to both the dependent variable (political risk) and independent variable of interest
+(political constraints). While we expect that left government causally effects expropriation risk (and possibly transfer risk), we do not expect a causal relationship to exist between political constraints and left government. However, recognizing that we may be wrong in this assessment, we include the variable here for good measure.  
+
+Including a control for left government does not alter the results we report in the body of the paper. Table A10 estimates a negative effect of political constraints on expropriation risk, a null relationship between political constraints and transfer risk, and a positive effect of political constraints on the ratio of transfer risk to expropriation risk.   
+
+We also see that, consistent with the conventional wisdom, left governments are associated with higher levels of expropriation risk. We estimate effectively no relationship, however, between left government and transfer risk. One plausible explanation for this difference is that left governments tend to prefer a larger role for government in the management of of the economy. This may manifest itself in policies that either bring formerly private assets under direct state control (which may be achieved via outright expropriation) or that increase regulation of firms (which may constitute creeping expropriation).  Transfer restriction, however, does not align as closely with these objectives. While expropriation and transfer restriction both increase government revenues (a goal generally associated with less governments), expropriation also serves additional goals of the left, such as government control of important sectors. These results suggest that transfer restriction, while not shunned by left governments, is also not a policy tool more preferred of left governments than of center or right governments.  
+
+
+\FloatBarrier
+
+
+\begin{table}[htbp]\centering
+\footnotesize
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{The Effect of Political Constraints on Political Risk: Left Governments}
+\begin{tabular}{l*{6}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c|}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c|}{(4)}&\multicolumn{1}{c}{(5)}&\multicolumn{1}{c}{(6)}\\
+                    \hline
+                      &\multicolumn{2}{c|}{DV=Expropriation Risk}&\multicolumn{2}{c|}{DV=Transfer Risk}&\multicolumn{2}{c}{DV=Risk Ratio}                 \\
+
+\hline
+Political Constraints&      -0.455\sym{*} &    -0.457\sym{\tau}&      -0.000        &       0.087        &       0.237\sym{*} &       0.287\sym{*} \\
+                    &     (0.222)        &     (0.238)        &     (0.128)        &     (0.141)        &     (0.119)        &     (0.126)        \\
+[1em]
+Left Government     &       0.276\sym{*} &       0.315\sym{**}&      -0.074        &      -0.070        &      -0.240\sym{**}&      -0.281\sym{**}\\
+                    &     (0.111)        &     (0.119)        &     (0.071)        &     (0.079)        &     (0.074)        &     (0.079)        \\
+[1em]
+Trade (\% of GDP)   &       0.002        &       0.003        &    -0.002\sym{\tau}&      -0.000        &    -0.002\sym{\tau}&      -0.002        \\
+                    &     (0.002)        &     (0.002)        &     (0.001)        &     (0.001)        &     (0.001)        &     (0.001)        \\
+[1em]
+GDP Per Capita (logged)&       0.040        &      -0.137        &      -0.325        &      -0.101        &      -0.049        &       0.078        \\
+                    &     (0.241)        &     (0.308)        &     (0.237)        &     (0.301)        &     (0.167)        &     (0.221)        \\
+[1em]
+GDP Growth          &       0.002        &       0.006        &      -0.001        &      -0.007\sym{*} &      -0.003        &      -0.007\sym{*} \\
+                    &     (0.003)        &     (0.004)        &     (0.003)        &     (0.003)        &     (0.002)        &     (0.003)        \\
+[1em]
+Reserves (logged)   &      -0.033        &       0.036        &      -0.033        &      -0.018        &       0.010        &       0.018        \\
+                    &     (0.047)        &     (0.069)        &     (0.036)        &     (0.059)        &     (0.034)        &     (0.051)        \\
+[1em]
+Inflation (logged)  &       0.125        &       0.149        &     0.100\sym{\tau}&       0.104        &      -0.039        &      -0.072        \\
+                    &     (0.095)        &     (0.107)        &     (0.051)        &     (0.096)        &     (0.067)        &     (0.073)        \\
+[1em]
+BITs to Date        &      -0.029\sym{**}&      -0.025\sym{**}&      -0.005        &      -0.007        &       0.010        &       0.007        \\
+                    &     (0.008)        &     (0.009)        &     (0.009)        &     (0.011)        &     (0.007)        &     (0.008)        \\
+[1em]
+Pegged Ex. Rate     &                    &      -0.071        &                    &      -0.011        &                    &       0.054        \\
+                    &                    &     (0.088)        &                    &     (0.088)        &                    &     (0.071)        \\
+[1em]
+Crawling Ex. Rate   &                    &      -0.036        &                    &       0.098        &                    &       0.075        \\
+                    &                    &     (0.076)        &                    &     (0.068)        &                    &     (0.058)        \\
+[1em]
+Natural Resource Exports&                    &       0.002        &                    &      -0.000        &                    &      -0.001        \\
+                    &                    &     (0.004)        &                    &     (0.002)        &                    &     (0.002)        \\
+[1em]
+Constant            &     3.273\sym{\tau}&       2.614        &       6.609\sym{**}&     4.310\sym{\tau}&       1.618        &       0.619        \\
+                    &     (1.954)        &     (2.478)        &     (1.857)        &     (2.185)        &     (1.365)        &     (1.686)        \\
+\hline
+Observations        &         952        &         730        &        1028        &         762        &         952        &         730        \\
+\(R^{2}\)           &       0.158        &       0.168        &       0.263        &       0.316        &       0.125        &       0.160        \\
+\hline\hline
+\multicolumn{7}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{7}{l}{\footnotesize Sample restricted to developing countries only.}\\
+\multicolumn{7}{l}{\footnotesize All models report heteroskedacticity-robust standard errors.}\\
+\multicolumn{7}{l}{\footnotesize \sym{\tau} \(p<0.10\), \sym{*} \(p<0.05\), \sym{**} \(p<.01\)}\\
+\end{tabular}
+\end{table}
+
+
+\FloatBarrier
+\subsubsection*{Controlling for Crises and Central Bank Independence}
+
+Because transfer restrictions are sometimes employed as tools of macro-prudential policy, capital shocks and changes to the independence of the central bank represent potential confounding variables that may affect both the level of domestic political constraints and the level of transfer risk. In particular, we expect that transfer restrictions may be more common (and thus transfer risk higher) when countries are facing episodes of capital flight (i.e. a rapid increase in outward investment by domestic investors) or capital stops (i.e. a sudden decrease in inward investment by foreign investors). To evaluate this possibility, we use data on episodes of capital flight and capital stops from Forbes and Warnock (2012). To evaluate possible confounding effects of central bank independence (CBI), we use data from Bodea and Hicks (2015). Because the original Forbes and Warnock data are reported on a quarterly basis, we create country-year versions of the variables that take a value of 1 if an episode occurs in any quarter of a calendar year.  
+
+Table A11 presents the results of six regressions. These regressions match the most heavily controlled regressions provided in the body of the paper, but also control for CBI (Models 1-3) or capital flight episodes and capital stop episodes (Models 4-6). The Forbes and Warnock data are available for only 58 countries, with fewer observations in some years. Thus, the inclusion of these controls causes a major reduction in sample size -- more than 2/3 of our original observations are dropped. Similarly, inclusion of the CBI control reduces our sample size by roughly half. We do not include the CBI and crisis variables in any models jointly, because the reduction in sample size simply becomes too severe.
+
+In spite of the reductions in sample size, the results in Table A11 are similar to those presented in the body of the paper. Consistent with Hypotheses 1 and 2, the estimated effect of political constraints on expropriation risk are negative and statistically significant (Models 1 and 4), while the estimated effects of constraints on transfer risk are positive and near zero (Models 2 and 5). Consistent with Hypothesis 3 and the results in Table 2 of the main paper, the estimated effect of constraints on \emph{risk ratio} is positive. This positive effect is statistically significant when controlling for CBI (Model 3). When controlling for crises, the estimated coefficient on political constraints is larger than when the crisis controls are not in place but, because of the reduced sample size, this effect is not statistically significant.
+
+Once the effects of political constraints and the other control variables are accounted for, the estimated effect of CBI on both types of political risk is positive. We had no prior theoretical expectation these relationships, and thus, while we acknowledge this as a potentially fruitful area for future investigation, we are cautious in interpreting these estimated effects. The relationship between CBI and political risk is much weaker, albeit still positive, when other control variables are removed.  
+
+Looking at the effects of capital stop and capital flight episodes on transfer risk, we see that the estimated effects of these variables are small and not statistically significant.\footnote{Even removing all other control variables, the estimated effects of these crisis variables on transfer risk are not statistically significant.} It does not appear that these episodes are strong predictors of transfer risk. %This may be because transfer restrictions are more likely to be imposed in response to sustained capital outflows rather than episodes of sharp decline. 
+This weak relationship is consistent with our argument that transfer risk is strongly determined by domestic political factors and that transfer restrictions can be best understood as a revenue collection strategy by host governments, not simply as a response to capital shocks or balance of payments concerns more broadly. 
+
+
+
+
+
+
+\begin{table}[htbp]\centering
+\footnotesize
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{The Effect of Political Constraints, Controlling for Crises and CBI}
+\begin{tabular}{l*{6}{c}}
+\hline\hline
+                &\multicolumn{1}{c}{(1)}        &\multicolumn{1}{c}{(2)}        &\multicolumn{1}{c}{(3)}        &\multicolumn{1}{c}{(4)}        &\multicolumn{1}{c}{(5)}        &\multicolumn{1}{c}{(6)}        \\
+\hline
+Political Constraints&   -0.673\sym{*} &    0.155        &    0.479\sym{*} &   -0.715\sym{*} &    0.024        &    0.366        \\
+                &  (0.313)        &  (0.141)        &  (0.219)        &  (0.309)        &  (0.247)        &  (0.349)        \\
+[1em]
+Trade (\% of GDP)&    0.005        &   -0.001        &   -0.003        &    0.013\sym{**}&   -0.001        &   -0.011\sym{**}\\
+                &  (0.003)        &  (0.002)        &  (0.002)        &  (0.004)        &  (0.003)        &  (0.003)        \\
+[1em]
+GDP Per Capita (logged)&   -0.558        &   -0.229        &    0.104        &   -0.652        &    0.233        &    0.848        \\
+                &  (0.510)        &  (0.295)        &  (0.322)        &  (0.712)        &  (0.636)        &  (0.706)        \\
+[1em]
+GDP Growth      &    0.008        & -0.006\sym{\tau}&   -0.008\sym{*} &    0.001        & -0.012\sym{\tau}&   -0.013        \\
+                &  (0.005)        &  (0.003)        &  (0.003)        &  (0.010)        &  (0.007)        &  (0.008)        \\
+[1em]
+Reserves (logged)&    0.071        &    0.002        &    0.048        &    0.053        &    0.148        &    0.109        \\
+                &  (0.148)        &  (0.083)        &  (0.105)        &  (0.143)        &  (0.092)        &  (0.124)        \\
+[1em]
+Inflation (logged)&  0.289\sym{\tau}&    0.097        &   -0.145        &    0.390\sym{*} &    0.324        &   -0.136        \\
+                &  (0.171)        &  (0.130)        &  (0.111)        &  (0.160)        &  (0.221)        &  (0.164)        \\
+[1em]
+BITs to Date    &   -0.013        &   -0.004        &    0.005        &   -0.020        &   -0.003        &    0.005        \\
+                &  (0.008)        &  (0.010)        &  (0.009)        &  (0.016)        &  (0.012)        &  (0.015)        \\
+[1em]
+Pegged Ex. Rate &   -0.229\sym{*} & -0.136\sym{\tau}&    0.093        &   -0.028        &    0.030        &    0.017        \\
+                &  (0.101)        &  (0.074)        &  (0.083)        &  (0.160)        &  (0.193)        &  (0.094)        \\
+[1em]
+Crawling Ex. Rate&   -0.084        &    0.023        &    0.077        &   -0.071        &    0.106        &    0.086        \\
+                &  (0.066)        &  (0.048)        &  (0.048)        &  (0.090)        &  (0.084)        &  (0.068)        \\
+[1em]
+Natural Resource Exports&    0.006        &   -0.001        &   -0.003        &    0.036        &   -0.004        &   -0.016        \\
+                &  (0.009)        &  (0.003)        &  (0.005)        &  (0.024)        &  (0.008)        &  (0.011)        \\
+[1em]
+Central Bank Independence          &    0.768\sym{**}&    0.645\sym{**}&   -0.165        &                 &                 &                 \\
+                &  (0.207)        &  (0.235)        &  (0.185)        &                 &                 &                 \\
+[1em]
+Capital Flight Episode&                 &                 &                 &   -0.010        &    0.045        &   -0.029        \\
+                &                 &                 &                 &  (0.053)        &  (0.045)        &  (0.048)        \\
+[1em]
+Capital Stop Episode&                 &                 &                 &   -0.075        &   -0.029        &    0.046        \\
+                &                 &                 &                 &  (0.061)        &  (0.038)        &  (0.046)        \\
+[1em]
+Constant        &    3.506        &    3.695        &   -0.023        &    4.036        &   -4.229        &   -7.211        \\
+                &  (2.884)        &  (2.268)        &  (2.223)        &  (5.739)        &  (4.817)        &  (5.678)        \\
+\hline
+Observations    &      399        &      406        &      399        &      203        &      203        &      203        \\
+\(R^{2}\)       &    0.232        &    0.351        &    0.125        &    0.410        &    0.378        &    0.319        \\
+\hline\hline
+\multicolumn{7}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{7}{l}{\footnotesize Sample restricted to developing countries only.}\\
+\multicolumn{7}{l}{\footnotesize All models report heteroskedasticity-robust standard errors.}\\
+\multicolumn{7}{l}{\footnotesize \sym{\tau} \(p<0.10\), \sym{*} \(p<0.05\), \sym{**} \(p<.01\)}\\
+\end{tabular}
+\end{table}
+
+
+
+\FloatBarrier
+
+\subsection*{Estimation Using an Ordinal Version of the Ratio Dependent Variable}
+
+Our tests of Hypothesis 3 involve the analysis of a ratio dependent variable. In Figure A1 we provide a histogram of this dependent variable, showing that it is close to normal in its distribution and has no outlying values that might bias regression results. However, to make this point more explicitly, in this section we also evaluate the robustness of our results to analysis of an alternate version of that ratio dependent variable. \textit{Risk Ratio (Ordinal)} is an ordinal variable with four values: Low, Medium-low, Medium-high, and High, each of which correspond to one quartile of the values in the continuous version of \textit{Risk Ratio}. Table A12 presents regressions that are similar to those presented in Table 2 of the main paper, but with \textit{Risk Ratio (Ordinal)} as the dependent variable. These models are estimated using ordered logistic regressions with country and year fixed effects and heteroskedasticity-robust standard errors. Consistent with Hypothesis 3 and the results presented in the main paper, we estimate a positive and statistically significant relationship between political constraints and the ratio of transfer risk to expropriation risk. When political constraints are higher, expropriation risk is lower relative to transfer risk (and vice versa).
+
+We prefer the specification presented in the body of the paper because it makes use of all the variation in our ratio dependent variable. However, these ordinal results demonstrate that the support we find for Hypothesis 3 is not dependent on a particular specification and is not driven by outlying values of the dependent variable.
+
+\begin{table}[htbp]\centering
+\footnotesize
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{The Effect of Political Constraints on Risk Ratio (Ordinal)}
+\begin{tabular}{l*{2}{c}}
+\hline\hline
+                &\multicolumn{1}{c}{(1)}        &\multicolumn{1}{c}{(2)}        \\
+\hline
+Political Constraints&    2.041\sym{*} &    2.100\sym{*} \\
+                &  (0.801)        &  (0.915)        \\
+[1em]
+Trade (\% of GDP)&   -0.013        &   -0.022        \\
+                &  (0.009)        &  (0.013)        \\
+[1em]
+GDP Per Capita (logged)&   -1.847        &   -0.993        \\
+                &  (1.410)        &  (1.908)        \\
+[1em]
+GDP Growth      &   -0.010        &   -0.079\sym{**}\\
+                &  (0.033)        &  (0.029)        \\
+[1em]
+Reserves (logged)&    0.274        &    0.257        \\
+                &  (0.251)        &  (0.405)        \\
+[1em]
+Inflation (logged)&   -0.360        &   -0.780        \\
+                &  (0.573)        &  (0.657)        \\
+[1em]
+BITs to Date    &    0.136\sym{*} &    0.141        \\
+                &  (0.064)        &  (0.108)        \\
+[1em]
+Pegged Ex. Rate &                 &  1.220\sym{\tau}\\
+                &                 &  (0.673)        \\
+[1em]
+Crawling Ex. Rate&                 &  0.993\sym{\tau}\\
+                &                 &  (0.549)        \\
+[1em]
+Natural Resource Exports&                 &   -0.009        \\
+                &                 &  (0.013)        \\
+\hline
+Constant: Cut 1        &   -6.828        &   -3.808        \\
+                & (10.998)        & (15.785)        \\
+\hline
+Constant: Cut 2       &   -5.114        &   -2.058        \\
+                & (11.005)        & (15.802)        \\
+\hline
+Constant: Cut 3        &   -1.608        &    1.656        \\
+                & (11.004)        & (15.790)        \\
+\hline
+Observations    &      985        &      741        \\
+\hline\hline
+\multicolumn{3}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{3}{l}{\footnotesize Sample restricted to developing countries only.}\\
+\multicolumn{3}{l}{\footnotesize Ordered logit models with country fixed effects via dummy variables.}\\
+\multicolumn{3}{l}{\footnotesize Heteroskedasticity-robust standard errors.}\\
+\multicolumn{3}{l}{\footnotesize \sym{\tau} \(p<0.10\), \sym{*} \(p<0.05\), \sym{**} \(p<.01\)}\\
+\end{tabular}
+\end{table}
+
+
+\FloatBarrier
+
+
+\subsection*{What Drives Changes in \emph{Risk Ratio}?}
+Our theoretical model predicts that, under all conditions, political constraints should reduce expropriation risk. However, with respect to transfer restriction, the predictions of our model are more nuanced: there are conditions under which an increase in political constraints yields a decrease in transfer restriction, conditions under which it yields an increase in transfer restriction, and conditions under which transfer risk is unaffected. Consistent with these results, the regression results in the body of the paper show: 1) a negative relationship between political constraints and expropriation risk; 2) An ambiguous relationship between political constraints and transfer risk; 3) A positive relationship between political constraints and the ratio of transfer risk to expropriation risk (\emph{risk ratio}). However, what these regression results do not show clearly whether or not it is the case that, under some conditions, political constraints actually increase transfer restrictions in absolute terms. Put differently, what is driving the positive relationship between political constraints and risk ratio? Is this relationship driven exclusively by changes in expropriation risk (i.e. one tool is restricted more than the other) or is it also driven, in some cases, by increases in transfer risk (i.e. by substitution away from expropriation and into transfer restriction)?
+
+ We address this question empirically in two ways. First, we examine the cases in our data that match our theoretical predictions most closely -- the countries in which a change in transfer risk is immediately followed by the predicted change in the ratio of transfer risk relative to expropriation risk (\emph{risk ratio}). In other words, we examine those countries in which an increase in political constraints is followed immediately by an increase in \emph{risk ratio}, and cases in which a decrease in political constraints is followed immediately by a decrease in risk ratio. Among these cases, we ask, ``what is driving the change in \emph{risk ratio}, a change in transfer risk or a change in expropriation risk, or both?"  Second, we re-run the regressions depicted in Table 2 in the main paper on four subsets of data: observations for which there is a change in expropriation risk from year t-1 to year t; observations for which there is no change in expropriation risk; data in which; observations for which there is a change in transfer risk from year t-1 to year t; observations for which there is no change in transfer risk. In these regressions we can see the extent to which our theory about the relationship between political constraints and \emph{risk ratio} is robust to limiting the sample to those cases where changes in expropriation risk are driving changes in \emph{risk ratio}, and to cases where changes in transfer risk are driving changes in \emph{risk ratio}.  
+
+\subsubsection*{Case examination}
+We look first at cases in which an increase in political constraints is immediately followed (i.e. in the following year, but not the same year), by an increase in the ratio of transfer risk relative to expropriation risk (i.e. an increase in \emph{risk ratio}). Thirteen cases meet these criteria. Of these, eight involve a decrease in expropriation risk and five involve an increase in transfer risk. 
+
+Next, we examine cases in which a decrease in political constraints is followed immediately by a decrease in the ratio of transfer risk relative to expropriation risk.
+Twenty-one cases meet these criteria. Fifteen of these cases involve an increase in expropriation risk and seven involve a decrease in transfer risk (one case involves both).
+
+In short, consistent with our theoretical argument, when changes in political constraints are followed immediately by the changes in \emph{risk ratio} that our theory predicts, this is sometimes driven by a change in expropriation risk and sometimes by a change in transfer risk. Changes in expropriation risk are the more common mechanism, but we see that changes in transfer risk drive a non-trivial subset of these cases, accounting for roughly one-third of the cases discussed above.\footnote{When we increase the size of the window -- i.e., examining cases where changes to \emph{risk ratio} occur within three or five years of a change in political constraints, the percentage of cases accounted for by changes in expropriation risk grows, but the number of cases driven by changes in transfer risk remains non-trivial}. This provides (limited) evidence that, under some conditions, increases in political constraints can lead to increases in transfer risk and vice-versa.
+
+\subsubsection*{Subset Analysis}
+Turning now to regression analysis, Table A13 shows the results of eight regressions that reproduce the regressions run for Table 2 in the main paper on four subsets of data.  Models 1 and 2 evaluate the effect of \emph{political constraints} on \emph{risk ratio} in the subset of observations for which a change in expropriation risk has occurred; Models 3 and 4 estimate the same relationship among those observations for which their was no change in expropriation risk. Across all four models, we estimate a positive relationship between \emph{political constraints} and \emph{risk ratio} and this relationship is statistically significant (p < .05) in three of four models.  The estimated effect of \emph{political constraints}  is roughly twice as large in the cases with a change in expropriation risk than we estimate in Table 2, which includes all cases.\footnote{The coefficients are 0.67 and 0.66 in Models 1 and 2 in Table A13 and  0.31 and 0.39 in Table 2 in the main paper.} However, the effect is still positive, and of borderline statistical significance in those cases for which there is no change in expropriation risk. This is consistent with our theoretical argument that the effect of political constraints on the ratio of transfer risk to expropriation risk is driven primarily, by not exclusively by the negative relationship between political constraints and expropriation risk. 
+
+We conduct a parallel analysis comparing the effects of \emph{political constraints} on \emph{risk ratio} in those cases where transfer risk has changed (Models 5 and 6) and where it has not changed (Models 7 and 8).  Again, we see results consistent with our theory.  The subset of observations for which transfer risk has changed is small -- only 102 observations in Model 5 and 91 in Model 6 -- but we estimate a positive effect of \emph{political constraints} that is of similar magnitude to that estimated in the full sample in Table 2 in the main paper. However, due to the small sample size, this estimated effect is not statistically significant.  In those cases for which transfer risk is unchanged (Models 7 and 8), we estimate a smaller positive effect, which is of borderline statistical significance. Again, these results are consistent with our argument that most, but not all, of the relationship between political constraints and the ratio of transfer risk to expropriation risk is driven by the negative effect of constraints on expropriation. These results are consistent the claim that some of that effect is driven by cases in which governments actually \emph{increase} their use of transfer restrictions when political constraints raise both the absolute and relative costs of expropriation.
+
+
+\begin{table}[htbp]\centering
+\footnotesize
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{The Effect of Political Constraints on Risk Ratio: Split Samples}
+\begin{tabular}{l*{8}{c}}
+\hline\hline
+                &\multicolumn{2}{c|}{Exprop. Change}&\multicolumn{2}{c|}{No Exprop Change}&\multicolumn{2}{c|}{Transfer Change}&\multicolumn{2}{c}{No Transfer Change}\\
+                &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c|}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c|}{(4)}&\multicolumn{1}{c}{(5)}&\multicolumn{1}{c|}{(6)}&\multicolumn{1}{c}{(7)}&\multicolumn{1}{c}{(8)}\\
+
+\hline
+Political Constraints&    0.668\sym{**}&    0.664\sym{**}&  0.182\sym{\tau}&    0.278\sym{*} &    0.362        &    0.447        &  0.194\sym{\tau}&  0.250\sym{\tau}\\
+                &  (0.192)        &  (0.241)        &  (0.097)        &  (0.129)        &  (0.344)        &  (0.443)        &  (0.104)        &  (0.128)        \\
+[1em]
+Trade (\% of GDP)&   -0.000        &   -0.003        &   -0.002\sym{*} &   -0.002        &    0.005        &    0.006        &   -0.002\sym{*} & -0.003\sym{\tau}\\
+                &  (0.002)        &  (0.004)        &  (0.001)        &  (0.001)        &  (0.005)        &  (0.005)        &  (0.001)        &  (0.001)        \\
+[1em]
+GDP Per Capita (logged)&    0.135        &    0.271        &    0.088        &    0.175        &    0.671        &    0.351        &   -0.042        &    0.066        \\
+                &  (0.273)        &  (0.500)        &  (0.134)        &  (0.185)        &  (0.700)        &  (0.557)        &  (0.124)        &  (0.168)        \\
+[1em]
+GDP Growth      &    0.000        &   -0.002        &   -0.002        &   -0.006\sym{*} &   -0.004        &    0.003        &   -0.001        & -0.004\sym{\tau}\\
+                &  (0.004)        &  (0.009)        &  (0.002)        &  (0.003)        &  (0.010)        &  (0.014)        &  (0.001)        &  (0.003)        \\
+[1em]
+Reserves (logged)&    0.028        &    0.005        &    0.000        &    0.008        &  0.139\sym{\tau}&    0.178\sym{*} &   -0.001        &   -0.016        \\
+                &  (0.040)        &  (0.073)        &  (0.027)        &  (0.046)        &  (0.075)        &  (0.078)        &  (0.029)        &  (0.044)        \\
+[1em]
+Inflation (logged)&   -0.365\sym{*} &   -0.343        &   -0.003        &   -0.026        &   -0.164        &   -0.030        &   -0.051        &   -0.082        \\
+                &  (0.160)        &  (0.208)        &  (0.048)        &  (0.067)        &  (0.188)        &  (0.247)        &  (0.055)        &  (0.070)        \\
+[1em]
+BITs to Date    &    0.028\sym{*} &    0.028        &    0.007        &    0.007        &   -0.026        &   -0.012        &    0.009        &    0.008        \\
+                &  (0.014)        &  (0.024)        &  (0.006)        &  (0.007)        &  (0.019)        &  (0.020)        &  (0.006)        &  (0.006)        \\
+[1em]
+Pegged Ex. Rate &                 &    0.016        &                 &    0.102        &                 &   -0.060        &                 &    0.071        \\
+                &                 &  (0.102)        &                 &  (0.070)        &                 &  (0.116)        &                 &  (0.059)        \\
+[1em]
+Crawling Ex. Rate&                 &    0.070        &                 &    0.077        &                 &    0.081        &                 &    0.074        \\
+                &                 &  (0.098)        &                 &  (0.055)        &                 &  (0.099)        &                 &  (0.051)        \\
+[1em]
+Natural Resource Exports&                 & -0.005\sym{\tau}&                 &   -0.001        &                 &   -0.003        &                 &   -0.001        \\
+                &                 &  (0.003)        &                 &  (0.002)        &                 &  (0.005)        &                 &  (0.002)        \\
+[1em]
+Constant        &   -0.047        &   -0.240        &    0.500        &   -0.356        &   -6.950        & -5.727\sym{\tau}&    1.629        &    1.263        \\
+                &  (2.245)        &  (4.252)        &  (1.150)        &  (1.566)        &  (4.590)        &  (3.296)        &  (1.026)        &  (1.291)        \\
+\hline
+Observations    &      261        &      203        &      724        &      538        &      102        &       91        &      883        &      650        \\
+\(R^{2}\)       &    0.236        &    0.281        &    0.061        &    0.088        &    0.569        &    0.561        &    0.076        &    0.094        \\
+\hline\hline
+\multicolumn{9}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{9}{l}{\footnotesize Sample restricted to developing countries only.}\\
+\multicolumn{9}{l}{\footnotesize All models report heteroskedasticity-robust standard errors.}\\
+\multicolumn{9}{l}{\footnotesize \sym{\tau} \(p<0.10\), \sym{*} \(p<0.05\), \sym{**} \(p<.01\)}\\
+\end{tabular}
+\end{table}
+
+
+
+
+
+\clearpage
+
+
+
+\section*{Additional References}\label{A:references}
+\hangindent=1cm
+
+\singlespacing
+
+\item \hangindent=1cm Andersson, S. and Heywood, P. M. 2009. The Politics of Perception: Use and Abuse of Transparency International's Approach to Measuring Corruption. \emph{Political Studies}, 57: 746-767. 
+
+\item \hangindent=1cm Beck, Thorsten, George Clarke, Alberto Groff, Philip Keefer and Patrick Walsh. 2001. "New Tools and New Tests in Comparative Political Economy: the Database of Political Institutions." \emph{World Bank Economic Review} 15: 165-176.
+
+\item \hangindent=1cm Bodea, Cristina, and Raymond Hicks.  2015.  "Price Stability and Central Bank Independence: Discipline, Credibility, and Democratic Institutions."  \emph{International Organization} 69: 35-61.
+
+\item \hangindent=1cm Fernandez, Klein, Rebucci, Schindler and Uribe. 2015. Capital Control Measures: A New Dataset.  \emph{National Bureau of Economic Research}, Working Paper No. 20970.
+
+\item  \hangindent=1cm Forbes, Kristin J, and Francis E Warnock.  2012.  "Capital Flow Waves: Surges, Stops, Flight, and Retrenchment."  \emph{Journal of International Economics} 88: 235-51.
+
+\item \hangindent=1cm Kemen, Hans.  2007.  Experts and manifestos: Different sourcesâ Same results for comparative research?  \emph{Electoral studies}, 26(1): 76-89.
+
+\item  \hangindent=1cm Kerner, Andrew.  2014.  What We Talk About When We Talk About Foreign Direct Investment. International Studies Quarterly, 58(4): 804-815.
+
+\item \hangindent=1cm Knack, Stephen.  2006.  Measuring Corruption in Eastern Europe and Central Asia: A Critique of the Cross-Country Indicators.  World Bank Policy Research Working Paper 3968.  
+
+\item \hangindent=1cm Marshall, Monty G. and Keith Jaggers. 2002. "Polity IV Project: Data Users' Manual." University of Maryland, College Park.
+
+\item \hangindent=1cm Pinto, Pablo M.  2013.  \emph{Partisan Investment in the Global Economy: Why the Left Loves Foreign Direct Investment and FDI Loves the Left.} Cambridge: Cambridge University Press.
+
+\item \hangindent=1cm Roodman, David. 2009. ``A Note on the Theme of Too Many Instruments." \emph{Oxford Bulletin of Economics and Statistics} 71 (1): 135-158.
+
+\item \hangindent=1cm Schindler, Martin. Measuring Financial Integration:  A New Data Set.  \emph{IMF Staff Papers}, Vol. 56, No. 1, 2009, pp. 222-238
+
+
+
+\end{document}
