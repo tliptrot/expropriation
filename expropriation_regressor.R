@@ -1,19 +1,25 @@
+# Robbing Peter to Purge Paul - by Timothy Liptrot, Bhavya Srivastava and Claire Lee
+
+# start - packages
 library(tidyverse)
 library(haven)
-library(haven)
-
 library(readr)
+
+# data - international expropriations. There are three files because the Kobrin's original data was expanded by subesequent authors. I ahve contacted all three for permissions.
 expr_h <- read_csv("exprop-Hajzler-2008-03-09.csv")
 expr_m <- read_csv("exprop-Minor-2007-10-22.csv")
 expr_k <- read_csv("exprop-Kobrin-2007-10-22.csv")
 
+# The variable names are not consistent across the three documents, this changes them all to lower
 names(expr_h)<-tolower(names(expr_h))
 names(expr_m)<-tolower(names(expr_m))
 names(expr_k)<-tolower(names(expr_k))
 
+#brings them all together
 expr_mk <- full_join(expr_m, expr_k)
 expr_all <- full_join(expr_mk, expr_h)
 
+# This entire section standardizes country names 
 expr_all$country <- tolower(expr_all$country)
 expr_all$type <- tolower(expr_all$type)
 expr_all$sector <- tolower(expr_all$sector)
@@ -41,15 +47,7 @@ industry_key <- c(pet = "extractive", agr = "manufacturing", min = "extractive",
 
 expr_all$sector_sim <- recode(expr_all$sector, !!!industry_key)
 
-
-
-# diagnostic
-
-#sort(unique(reign$country))
-
-#sort(unique(expr_all$country))
-
-## Reign dataset
+## The Reign dataset provides the most detailed record of when new leaders came into office. We might change out leaders for regimes in the final version (a regime is a leader-selection device with a constant support group like the CCP or the Saudi Royal Family, which can span multiple leaders)
 
 reign <- read_csv("REIGN_2021_4.csv")
 reign$country <- tolower(reign$country)
@@ -68,14 +66,12 @@ df3 <- left_join(expr_all, small_reign_no_lag, by = c("country","year")) %>%
 
 glimpse(df3)
 
+#makes a histogram of the years by type. Note the massive drop off in 1980, when basically all DC assets were taken. The increase seince 1990 has accelerated, but I have not integrated the new data yet
 ggplot(data=filter(df3,!is.na(overt)), aes(x=year, fill=overt)) + 
   geom_histogram(binwidth = 2, alpha=.5, position="identity") +
   facet_grid(rows = vars(overt)) +
   scale_fill_discrete(name = "Type", labels = c("Covert", "Overt")) +
   theme(strip.text.y = element_blank())
-
-ggplot(data, aes(x=siadoses, fill=recallbin, color=recallbin)) +
-  geom_histogram(binwidth=1, alpha=.5, position='identity') 
 
 #load the IPE big data
 
@@ -85,7 +81,7 @@ eri <- left_join(df3, ipe_v4, by = c("ccode","year"))
 
 #great!
 
-#Making database of years with FDI, expropriated or not
+# So far we have all the data to run regressions on method of expropriation, conditional on expropriation. But we cannot run a hazard model on the decision to expropriate, because we do not know when foreign investment existed to start with. Tomz and Wright have a dataset of all country years with any foreign investment
 
 tomz <- read_dta("tomz_wright_2012/TomzWright2010.dta")
 
@@ -107,10 +103,9 @@ reign_ccode <- small_reign_no_lag %>%
 
 df5 <- left_join(expr_all, reign_ccode, by = c("country","year"))
 
-glimpse(df5)
-
 eti_full <- left_join(ipe_tomz, df5, by = c("ccode","year"))
 
+# converts the Overt - Covert coding into three dummy variables. Int = intervention (when a non-state actor takes and government does not uphold the previous ownership rights)
 eti_full <- eti_full %>%
   filter(fdi==1) %>%
   mutate(expr = !is.na(overt),
@@ -119,20 +114,14 @@ eti_full <- eti_full %>%
          int_dummy = ifelse(is.na(overt),0,ifelse(type=="int",1,0))
   )
 
+#removes democracies with a simple polity cutoff
 eti_aut <- eti_full %>%
   filter(polity2_P4<0)
 
-count(eti_aut,expr)
+# Alternative coding of non-democracies
+#eri_aut <- filter(eri, gov_democracy==0)
 
-# Check if, conditional on using expropriation, consolidated dictators use overt or covert expropriation more
-
-# need - a constrain index, gdppc, gdppc^2, sectors
-
-eri_aut$bitstodate_BIT
-
-eri_aut <- filter(eri, gov_democracy==0)
-
-
+# Analysis - the old analysis I did, using only tenure in office.
 
 m1 <- glm(data=eri_aut, overt ~ log(tenure_years) + polity2_P4 + gdppc_WDI_PW + bitstodate_BIT + under_BCG, family = binomial(link = "probit"))
 
