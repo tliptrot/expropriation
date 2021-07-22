@@ -5,10 +5,10 @@ library(tidyverse)
 library(haven)
 library(readr)
 
-# data - international expropriations. There are three files because the Kobrin's original data was expanded by subesequent authors. I ahve contacted all three for permissions.
-expr_h <- read_csv("exprop-Hajzler-2008-03-09.csv")
-expr_m <- read_csv("exprop-Minor-2007-10-22.csv")
-expr_k <- read_csv("exprop-Kobrin-2007-10-22.csv")
+# data - international expropriations. There are three files because the Kobrin's original data was expanded by subsequent authors. I have contacted all three for permissions.
+expr_h <- read_csv("Data/working_data/international_expropriations/exprop-Hajzler-2008-03-09.csv")
+expr_m <- read_csv("Data/working_data/international_expropriations/exprop-Minor-2007-10-22.csv")
+expr_k <- read_csv("Data/working_data/international_expropriations/exprop-Kobrin-2007-10-22.csv")
 
 # The variable names are not consistent across the three documents, this changes them all to lower
 names(expr_h)<-tolower(names(expr_h))
@@ -59,12 +59,12 @@ small_reign_no_lag <- filter(reign, month==1 | country != lag(country))# | leade
 
 # Join reign and expr
 
-df3 <- left_join(expr_all, small_reign_no_lag, by = c("country","year")) %>%
+int_expr <- left_join(expr_all, small_reign_no_lag, by = c("country","year")) %>%
   mutate(tenure_years = tenure_months/12,
          decade = year - (year %% 10))
 
 
-glimpse(df3)
+glimpse(int_expr)
 
 #makes a histogram of the years by type. Note the massive drop off in 1980, when basically all DC assets were taken. The increase seince 1990 has accelerated, but I have not integrated the new data yet
 ggplot(data=filter(df3,!is.na(overt)), aes(x=year, fill=overt)) + 
@@ -75,9 +75,9 @@ ggplot(data=filter(df3,!is.na(overt)), aes(x=year, fill=overt)) +
 
 #load the IPE big data
 
-load("~/GitHub/expropriatoin/3. Graham_Tucker_IPE_v4.rdata")
+load("Data/working_data/???IPE_data_Graham_and_Tucker/3. Graham_Tucker_IPE_v4.tsv")
 
-eri <- left_join(df3, ipe_v4, by = c("ccode","year"))
+int_expr <- left_join(df3, ipe_v4, by = c("ccode","year"))
 
 #great!
 
