@@ -118,9 +118,23 @@ full <- full %>%
          int_dummy = ifelse(is.na(overt),0,ifelse(type=="int",1,0))
   )
 
-#removes democracies with a simple polity cutoff
-full_aut <- full %>%
-  filter(polity2_P4<0)
+# adds personalism data
+Personalism_Data_2 <- read_dta("Data/working_data/Personalism Data (2).dta")
+glimpse(Personalism_Data_2)
+
+filter(full, country=="cuba")
+
+full_pers_right <- right_join(full, Personalism_Data_2, by=c('year'="year","countryname_raw_GE"="country"))
+
+# adds personalism data to int_expr
+
+int_expr_pers <- left_join(int_expr, Personalism_Data_2, by=c('year'="year","countryname_raw_GE"="country"))
+
+
+# Saving the datasets
+write.csv(full_pers_right, "Data/working_data/full_pers_extra")
+
+write.csv(int_expr_pers, "Data/working_data/int_expr_extra")
 
 # Alternative coding of non-democracies
 #eri_aut <- filter(eri, gov_democracy==0)
