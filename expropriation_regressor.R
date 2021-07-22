@@ -139,6 +139,9 @@ write.csv(int_expr_pers, "Data/working_data/int_expr_extra.csv")
 # Alternative coding of non-democracies
 #eri_aut <- filter(eri, gov_democracy==0)
 
+r1 <- glm(data=full)
+
+
 # Analysis - the old analysis I did, using only tenure in office.
 
 m1 <- glm(data=eri_aut, overt ~ log(tenure_years) + polity2_P4 + gdppc_WDI_PW + bitstodate_BIT + under_BCG, family = binomial(link = "probit"))
