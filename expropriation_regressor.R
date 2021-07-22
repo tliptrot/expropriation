@@ -75,15 +75,19 @@ ggplot(data=filter(df3,!is.na(overt)), aes(x=year, fill=overt)) +
 
 #load the IPE big data
 
-load("Data/working_data/???IPE_data_Graham_and_Tucker/3. Graham_Tucker_IPE_v4.tsv")
+load("~/GitHub_reformrat/expropriation/Data/working_data/IPE_data/dataverse_files/3. Graham_Tucker_IPE_v4.rdata")
 
-int_expr <- left_join(df3, ipe_v4, by = c("ccode","year"))
+ipe_v4 <- filter(ipe_v4, year > 1949)
+
+int_expr <- left_join(int_expr, ipe_v4, by = c("ccode","year"))
 
 #great!
 
 # So far we have all the data to run regressions on method of expropriation, conditional on expropriation. But we cannot run a hazard model on the decision to expropriate, because we do not know when foreign investment existed to start with. Tomz and Wright have a dataset of all country years with any foreign investment
 
-tomz <- read_dta("tomz_wright_2012/TomzWright2010.dta")
+
+
+tomz <- read_dta("Data/working_data/tomz_wright_2012/TomzWright2010.dta")
 
 tomz <- tomz %>% 
   rename(
@@ -103,10 +107,10 @@ reign_ccode <- small_reign_no_lag %>%
 
 df5 <- left_join(expr_all, reign_ccode, by = c("country","year"))
 
-eti_full <- left_join(ipe_tomz, df5, by = c("ccode","year"))
+full <- left_join(ipe_tomz, df5, by = c("ccode","year"))
 
 # converts the Overt - Covert coding into three dummy variables. Int = intervention (when a non-state actor takes and government does not uphold the previous ownership rights)
-eti_full <- eti_full %>%
+full <- full %>%
   filter(fdi==1) %>%
   mutate(expr = !is.na(overt),
          covert_dummy = ifelse(is.na(overt),0,ifelse(overt==0,1,0)),
@@ -115,7 +119,7 @@ eti_full <- eti_full %>%
   )
 
 #removes democracies with a simple polity cutoff
-eti_aut <- eti_full %>%
+full_aut <- full %>%
   filter(polity2_P4<0)
 
 # Alternative coding of non-democracies
