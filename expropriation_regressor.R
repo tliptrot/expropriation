@@ -132,9 +132,9 @@ int_expr_pers <- left_join(int_expr, Personalism_Data_2, by=c('year'="year","cou
 
 
 # Saving the datasets
-write.csv(full_pers_right, "Data/working_data/full_pers_extra")
+write.csv(full_pers_right, "Data/working_data/full_pers_extra.csv")
 
-write.csv(int_expr_pers, "Data/working_data/int_expr_extra")
+write.csv(int_expr_pers, "Data/working_data/int_expr_extra.csv")
 
 # Alternative coding of non-democracies
 #eri_aut <- filter(eri, gov_democracy==0)
